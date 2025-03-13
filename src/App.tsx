@@ -1,7 +1,9 @@
+import styles from './App.module.scss';
+
 function App() {
   return (
     <>
-      test
+      <div className={styles.test}>teste</div>
     </>
   )
 }
