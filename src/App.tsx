@@ -1,9 +1,9 @@
-import Text from './components/Text';
+import Button from "./components/Button"
 
 function App() {
   return (
     <>
-      <Text detach>teste <b>teste</b></Text>
+      <Button styleType="link">teste</Button>
     </>
   )
 }

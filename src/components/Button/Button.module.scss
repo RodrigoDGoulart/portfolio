@@ -1,0 +1,91 @@
+.button {
+  border-radius: 8px;
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  
+  &.primary {
+    background-color: $cyan;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      background-color: $cyan-lighter;
+      box-shadow: 0 0 10px 4px $cyan-lighter;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+  }
+  
+  &.no-padding {
+    padding: 0;
+    border: none;
+    background: none;
+  }
+
+  &.secondary {
+    background-color: transparent;
+    border: 1px solid $pink;
+    transition: box-shadow 0.3s ease;
+    
+    &:hover {
+      box-shadow: 0 0 6px 1px $pink, inset 0 0 6px 1px $pink;
+      transition: box-shadow 0.3s ease;
+      
+      .label {
+        text-shadow: 
+          $pink 0 0 2px,
+          $pink 0 0 4px;
+        transition: text-shadow 0.3s ease;
+      }
+    }
+  }
+
+  &.text-only {
+    &:hover {
+      .label {
+        color: $pink;
+        text-shadow: 
+          $pink 0 0 2px,
+          $pink 0 0 4px;
+        transition: text-shadow 0.3s ease, color
+        0.3s ease;
+      }
+    }
+  }
+
+  &.link {
+    .label {
+      font-weight: normal;
+      color: $cyan;
+      text-decoration: underline;
+      transition: text-shadow 0.3s ease, color 0.3s ease;
+    }
+
+    &:hover {
+      .label {
+        color: $cyan-lighter;
+        text-shadow: 
+          $cyan-lighter 0 0 2px,
+          $cyan-lighter 0 0 4px;
+        transition: text-shadow 0.3s ease, color 0.3s ease;
+      }
+    }
+  }
+}
+
+.label {
+  font-weight: bold;
+  font-size: 16px;
+  
+  &.primary {
+    color: $dark-gray-850;
+  }
+
+  &.secondary {
+    color: $pink;
+  }
+  
+  &.text-only {
+    color: $white;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+  }
+}
