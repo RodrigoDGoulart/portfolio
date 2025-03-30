@@ -1,4 +1,7 @@
 .button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   border-radius: 8px;
   padding: 6px 10px;
   border: none;
@@ -32,9 +35,14 @@
       
       .label {
         text-shadow: 
-          $pink 0 0 2px,
-          $pink 0 0 4px;
+          $pink 0 0 1px,
+          $pink 0 0 3px;
         transition: text-shadow 0.3s ease;
+      }
+
+      .icon {
+        filter: drop-shadow(0 0 6px $pink);
+        transition: filter 0.3s ease;
       }
     }
   }
@@ -48,6 +56,11 @@
           $pink 0 0 4px;
         transition: text-shadow 0.3s ease, color
         0.3s ease;
+      }
+      .icon {
+        color: $pink;
+        filter: drop-shadow(0 0 6px $pink);
+        transition: color 0.3s ease, filter 0.3s ease;
       }
     }
   }
@@ -68,6 +81,11 @@
           $cyan-lighter 0 0 4px;
         transition: text-shadow 0.3s ease, color 0.3s ease;
       }
+      .icon {
+        color: $cyan-lighter;
+        filter: drop-shadow(0 0 6px $cyan-lighter);
+        transition: color 0.3s ease, filter 0.3s ease;
+      }
     }
   }
 }
@@ -87,5 +105,24 @@
   &.text-only {
     color: $white;
     transition: text-shadow 0.3s ease, color 0.3s ease;
+  }
+}
+
+.icon {
+  transition: color 0.3s ease, filter 0.3s ease;
+  &.primary {
+    color: $dark-gray-850;
+  }
+
+  &.secondary {
+    color: $pink;
+  }
+
+  &.text-only {
+    color: $white;
+  }
+
+  &.link {
+    color: $cyan;
   }
 }
