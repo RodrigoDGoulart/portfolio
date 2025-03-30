@@ -1,19 +1,22 @@
 import React from "react";
 
+import { IconType } from "../../@types";
+
 import styles from "./Button.module.scss";
 import classNames from "classnames";
 
 import Text from "../Text";
-import { IconType } from "../../@types";
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  styleType?: "primary" | "secondary" | "text-only" | "link";
+  styleType?: "primary" | "secondary" | "text-only" | "link" | "tab";
   icon?: IconType;
+  status?: "default" | "active";
 }
 
 export default function Button({
   styleType = "primary",
   icon: Icon,
+  status = "default",
   ...props
 }: Props) {
   return (
@@ -24,6 +27,7 @@ export default function Button({
         {
           [styles["no-padding"]]:
             styleType === "text-only" || styleType === "link",
+          [styles.active]: status === "active",
         },
         props.className
       )}

@@ -17,6 +17,12 @@ function App() {
       <Button icon={GithubIcon} styleType="link">
         teste
       </Button>
+      <Button icon={GithubIcon} styleType="tab">
+        teste
+      </Button>
+      <Button icon={GithubIcon} styleType="tab" status="active">
+        teste
+      </Button>
     </>
   );
 }
