@@ -9,6 +9,7 @@ interface Props extends React.HTMLAttributes<HTMLParagraphElement> {
 export default function Text({ children, ...props }: Props) {
   return (
     <p
+      {...props}
       className={classNames(
         styles.text,
         {
@@ -16,7 +17,6 @@ export default function Text({ children, ...props }: Props) {
         },
         props.className
       )}
-      {...props}
     >
       {children}
     </p>

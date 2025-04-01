@@ -21,6 +21,7 @@ export default function Button({
 }: Props) {
   return (
     <button
+      {...props}
       className={classNames(
         styles.button,
         styles[styleType],
@@ -29,9 +30,8 @@ export default function Button({
             styleType === "text-only" || styleType === "link",
           [styles.active]: status === "active",
         },
-        props.className
+        props.className // Mantenha props.className no final para combinar corretamente
       )}
-      {...props}
     >
       {Icon && <Icon className={classNames(styles.icon, styles[styleType])} />}
       <Text className={classNames(styles.label, styles[styleType])}>
