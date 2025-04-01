@@ -1,15 +1,10 @@
-import TabContainer from "./components/TabContainer";
+import Input from "./components/Input";
+import SearchIcon from "./assets/icons/search.svg?react";
 
 function App() {
   return (
     <>
-      <TabContainer
-        tabContent={[
-          { title: "Tab 1", content: "Content 1" },
-          { title: "Tab 2", content: "Content 2" },
-          { title: "Tab 3", content: "Content 3" },
-        ]}
-      />
+      <Input icon={SearchIcon} placeholder="teste" style={{width: '300px'}} />
     </>
   );
 }
