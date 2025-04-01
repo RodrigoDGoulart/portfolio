@@ -1,28 +1,15 @@
-import Button from "./components/Button";
-
-import GithubIcon from "./assets/icons/github.svg?react";
+import TabContainer from "./components/TabContainer";
 
 function App() {
   return (
     <>
-      <Button icon={GithubIcon} >
-        teste
-      </Button>
-      <Button icon={GithubIcon} styleType="secondary">
-        teste
-      </Button>
-      <Button icon={GithubIcon} styleType="text-only">
-        teste
-      </Button>
-      <Button icon={GithubIcon} styleType="link">
-        teste
-      </Button>
-      <Button icon={GithubIcon} styleType="tab">
-        teste
-      </Button>
-      <Button icon={GithubIcon} styleType="tab" status="active">
-        teste
-      </Button>
+      <TabContainer
+        tabContent={[
+          { title: "Tab 1", content: "Content 1" },
+          { title: "Tab 2", content: "Content 2" },
+          { title: "Tab 3", content: "Content 3" },
+        ]}
+      />
     </>
   );
 }
