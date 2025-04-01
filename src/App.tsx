@@ -1,10 +1,9 @@
-import Input from "./components/Input";
-import SearchIcon from "./assets/icons/search.svg?react";
+import Container from "./components/Container";
 
 function App() {
   return (
     <>
-      <Input icon={SearchIcon} placeholder="teste" style={{width: '300px'}} />
+      <Container title="teste">sdlfkjsd</Container>
     </>
   );
 }
