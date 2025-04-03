@@ -1,9 +1,14 @@
-import Container from "./components/Container";
+import Badge from "./components/Badge";
+import GithubIcon from "./assets/icons/github.svg?react";
 
 function App() {
   return (
     <>
-      <Container title="teste">sdlfkjsd</Container>
+      <Badge
+        icon={GithubIcon}
+        color={{ primary: "#ff0000", secondary: "#ffffff" }}
+        label="teste"
+      />
     </>
   );
 }

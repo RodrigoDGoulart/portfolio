@@ -1,0 +1,21 @@
+.badge {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  align-items: center;
+  width: fit-content;
+}
+
+.icon_div {
+  padding: 6px 10px;
+
+  .icon {
+    width: 18px;
+    height: auto;
+  }
+}
+
+.label {
+  padding: 4px 6px;
+  font-size: 16px;
+}
