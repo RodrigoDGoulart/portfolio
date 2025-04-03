@@ -1,18 +1,9 @@
 import styles from "./Badge.module.scss";
 import chroma from "chroma-js";
 
-import { IconType } from "../../@types";
+import { BadgeType } from "../../@types";
 
-interface Props {
-  icon: IconType;
-  label: string;
-  color: {
-    primary: string;
-    secondary?: string;
-  };
-}
-
-export default function Badge({ icon: Icon, label, color }: Props) {
+export default function Badge({ icon: Icon, label, color }: BadgeType) {
   return (
     <div className={styles.badge} style={{ backgroundColor: color.primary }}>
       <div
