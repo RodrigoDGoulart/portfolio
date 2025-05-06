@@ -26,3 +26,10 @@ export type Project = {
     icon: IconType;
   }[];
 }
+
+export type TimelineItem = {
+  title: string;
+  subtitle: string;
+  desc: string;
+  badges: BadgeType[];
+};

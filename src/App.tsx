@@ -1,11 +1,11 @@
 import GithubIcon from "./assets/icons/github.svg?react";
-import Card from "./components/Card";
 import { Project } from "./@types";
+import Timeline from "./components/Timeline";
 
 const projet_info: Project = {
+  image_url: '',
   title: "My Project",
   subtitle: "A brief description of my project.",
-  image_url: "https://via.placeholder.com/150",
   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris leo diam, vestibulum ut odio vel, eleifend accumsan ante. Suspendisse potenti. Proin quis rhoncus felis. Ut dictum tincidunt laoreet. Praesent nec orci at libero laoreet commodo at eu orci. Ut ut hendrerit tellus. Donec vel nisl at turpis efficitur malesuada. Nam non ante nisi.",
   badges: [
     {
@@ -74,7 +74,14 @@ const projet_info: Project = {
 function App() {
   return (
     <>
-      <Card content={projet_info} />
+      <Timeline 
+        items={[
+          projet_info, 
+          projet_info,
+          projet_info,
+          projet_info,
+          projet_info,
+        ]} />
     </>
   );
 }

@@ -1,0 +1,46 @@
+.dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: $cyan;
+  margin-top: 5px;
+}
+
+.container {
+  display: flex;
+  gap: 8px;
+  max-width: 300px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.titles {
+  color: $cyan;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+.desc {
+  text-align: justify;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
