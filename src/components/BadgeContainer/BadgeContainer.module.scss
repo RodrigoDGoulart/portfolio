@@ -1,0 +1,17 @@
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.extra_badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 18px;
+  background-color: $cyan;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+}

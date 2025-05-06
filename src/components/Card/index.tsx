@@ -4,10 +4,11 @@ import { Project as ProjectType } from "../../@types";
 
 import imgFallback from "../../assets/fallback-img.png";
 
-import Badge from "../Badge";
 import Button from "../Button";
 import Title from "../Title";
 import Text from "../Text";
+import BadgeContainer from "../BadgeContainer";
+
 import { useEffect, useState } from "react";
 
 interface Props {
@@ -51,16 +52,7 @@ export default function Card({ content }: Props) {
           </Title>
         </div>
         <Text className={styles.desc}>{content.desc}</Text>
-        <div className={styles.badges}>
-          {content.badges?.slice(0, value).map((badge) => (
-            <Badge key={badge.label} {...badge} />
-          ))}
-            {content.badges?.length > value && (
-            <div className={styles.extra_badge}>
-              +{content.badges?.length - value} stacks
-            </div>
-            )}
-        </div>
+        <BadgeContainer badges={content.badges} maxLength={value} />
         <div className={styles.links}>
           {content.links.map((link) => (
             <Button
