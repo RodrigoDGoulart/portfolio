@@ -1,4 +1,4 @@
-import styles from './Timeline.module.scss';
+import styles from "./Timeline.module.scss";
 
 import { useEffect, useRef, useState } from "react";
 import { TimelineItem as TimelineItemType } from "../../@types";
@@ -12,23 +12,36 @@ export default function Timeline({ items }: Props) {
   const firstDotRef = useRef<HTMLDivElement | null>(null);
   const lastDotRef = useRef<HTMLDivElement | null>(null);
 
-  const [firstDot, setFirstDot] = useState<DOMRect | undefined>(undefined);
-  const [lastDot, setLastDot] = useState<DOMRect | undefined>(undefined);
+  const [firstDot, setFirstDot] = useState<
+    { top: number; left: number } | undefined
+  >(undefined);
+  const [lastDot, setLastDot] = useState<
+    { top: number; left: number } | undefined
+  >(undefined);
 
   useEffect(() => {
     function updatePositions() {
-      const first = firstDotRef.current?.getBoundingClientRect();
-      const last = lastDotRef.current?.getBoundingClientRect();
-  
-      setFirstDot(first);
-      setLastDot(last);
+      if (!firstDotRef.current || !lastDotRef.current) return;
+
+      const first = firstDotRef.current;
+      const last = lastDotRef.current;
+
+      setFirstDot({
+        top: first.offsetTop,
+        left: first.offsetLeft,
+      });
+
+      setLastDot({
+        top: last.offsetTop,
+        left: last.offsetLeft,
+      });
     }
-  
-    updatePositions(); // calcula na montagem
-  
+
+    updatePositions();
+
     window.addEventListener("resize", updatePositions);
-    window.addEventListener("scroll", updatePositions, true); // true = captura dentro de scrollables também
-  
+    window.addEventListener("scroll", updatePositions, true);
+
     return () => {
       window.removeEventListener("resize", updatePositions);
       window.removeEventListener("scroll", updatePositions, true);
@@ -37,12 +50,12 @@ export default function Timeline({ items }: Props) {
 
   return (
     <div className={styles.container}>
-      <div 
-        className={styles.line} 
+      <div
+        className={styles.line}
         style={{
           top: firstDot?.top,
           left: (firstDot?.left || 0) + 3,
-          height: lastDot?.y
+          height: lastDot && firstDot ? lastDot.top - firstDot.top : 0,
         }}
       />
       {items.map((item, index) => {
