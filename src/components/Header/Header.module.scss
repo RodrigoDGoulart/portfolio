@@ -1,0 +1,42 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: $black-50;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+
+  nav ul {
+    display: flex;
+    gap: 12px;
+  }
+
+  .social_media {
+    display: flex;
+    gap: 12px;
+
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+
+      .social_media__icon {
+        color: $cyan;
+        width: 18px;
+        height: 18px;
+        transition: all 0.25s;
+      }
+
+      &:hover {
+        .social_media__icon {
+          color: $pink;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

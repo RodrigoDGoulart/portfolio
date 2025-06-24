@@ -1,6 +1,7 @@
 import GithubIcon from "./assets/icons/github.svg?react";
 import { Project } from "./@types";
 import Timeline from "./components/Timeline";
+import Header from "./components/Header";
 
 const projet_info: Project = {
   image_url: '',
@@ -74,6 +75,7 @@ const projet_info: Project = {
 function App() {
   return (
     <>
+      <Header />
       <Timeline 
         items={[
           projet_info, 
@@ -81,7 +83,13 @@ function App() {
           projet_info,
           projet_info,
           projet_info,
+          projet_info,
+          projet_info,
+          projet_info,
+          projet_info,
+          projet_info,
         ]} />
+        <div id="projects">projetos</div>
     </>
   );
 }
