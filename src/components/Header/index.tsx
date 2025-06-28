@@ -5,19 +5,32 @@ import WhatsappIcon from "../../assets/icons/whatsapp.svg?react";
 import EmailIcon from "../../assets/icons/email.svg?react";
 import GithubIcon from "../../assets/icons/github.svg?react";
 import LinkedinIcon from "../../assets/icons/linkedin.svg?react";
-import { IconType } from "../../@types";
-import Button from "../Button";
+import HamburguerIcon from "../../assets/icons/hamburguer.svg?react";
 
-const SOCIAL_MEDIA: { icon: IconType; url: string }[] = [
+import { LinkType, SocialMediaType } from "../../@types";
+
+import Button from "../Button";
+import ModalMenu from "./ModalMenu";
+import { useState } from "react";
+
+const SOCIAL_MEDIA: SocialMediaType[] = [
   { icon: WhatsappIcon, url: "https://wa.me/5512996626277" },
   { icon: EmailIcon, url: "mailto:rodinizgoulart@gmail.com" },
   { icon: GithubIcon, url: "https://github.com/RodrigoDGoulart" },
   { icon: LinkedinIcon, url: "https://linkedin.com/in/rodrigo-diniz-goulart" },
 ];
 
+const LINKS: LinkType[] = [
+  { label: "Início", url: "#home" },
+  { label: "Sobre mim", url: "#about" },
+  { label: "Projetos", url: "#projects" },
+];
+
 export default function Header() {
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
   function handlePageClick(page: string) {
-    window.location.hash = '';
+    window.location.hash = "";
     window.location.hash = page;
   }
 
@@ -25,35 +38,40 @@ export default function Header() {
     window.open(page, "_blank");
   }
 
+  function handleMenuClose() {
+    setIsModalOpen(false);
+  }
+
   return (
     <header className={styles.header}>
+      {isModalOpen && (
+        <ModalMenu
+          pageLinks={LINKS}
+          socialMedia={SOCIAL_MEDIA}
+          onClose={handleMenuClose}
+          onPageClick={handlePageClick}
+          onSocialMediaClick={handleSocialMediaClick}
+        />
+      )}
+      <button
+        className={styles.hamb_btn}
+        onClick={() => setIsModalOpen(!isModalOpen)}
+      >
+        <HamburguerIcon className={styles.hamb_btn__icon} />
+      </button>
       <Logo className={styles.logo} />
       <nav>
         <ul>
-          <li>
-            <Button
-              styleType="text-only"
-              onClick={() => handlePageClick("#home")}
-            >
-              Início
-            </Button>
-          </li>
-          <li>
-            <Button
-              styleType="text-only"
-              onClick={() => handlePageClick("#about")}
-            >
-              Sobre mim
-            </Button>
-          </li>
-          <li>
-            <Button
-              styleType="text-only"
-              onClick={() => handlePageClick("#projects")}
-            >
-              Projetos
-            </Button>
-          </li>
+          {LINKS.map((link) => (
+            <li>
+              <Button
+                styleType="text-only"
+                onClick={() => handlePageClick(link.url)}
+              >
+                {link.label}
+              </Button>
+            </li>
+          ))}
         </ul>
       </nav>
       <div className={styles.social_media}>

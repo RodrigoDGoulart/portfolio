@@ -33,3 +33,13 @@ export type TimelineItem = {
   desc: string;
   badges: BadgeType[];
 };
+
+export type SocialMediaType = {
+  icon: IconType;
+  url: string;
+}
+
+export type LinkType = {
+  label: string;
+  url: string;
+}

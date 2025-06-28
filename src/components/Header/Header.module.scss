@@ -10,6 +10,10 @@
   align-items: center;
   padding: 18px;
 
+  .hamb_btn {
+    display: none;
+  }
+
   nav ul {
     display: flex;
     gap: 12px;
@@ -38,5 +42,29 @@
         }
       }
     }
+  }
+}
+
+@media(max-width: $mobile-breakpoint) {
+  .header {
+    justify-content: center;
+
+    .hamb_btn {
+      display: block;
+      position: absolute;
+      top: 16px;
+      left: 12px;
+      background: none;
+      border: none;
+
+      .hamb_btn__icon {
+        color: $cyan;
+      }
+    }
+
+    nav, .social_media {
+      display: none;
+    }
+
   }
 }

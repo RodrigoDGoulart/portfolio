@@ -1,0 +1,110 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: transparent;
+  animation: fadeIn 0.3s ease forwards;
+
+  &.closing {
+    animation: fadeOut 0.3s ease forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: $black-70;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    background-color: $black-70;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+.menu {
+  background-color: black;
+  height: calc(100% - 32px);
+  width: 160px;
+  padding: 20px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transform: translateX(-100%);
+  animation: slideIn 0.3s ease forwards;
+
+  &.closing {
+    animation: slideOut 0.3s ease forwards;
+  }
+
+  @keyframes slideIn {
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .hamb_icon {
+    color: $cyan;
+  }
+
+  .spacing {
+    flex: 1;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .divisor {
+    width: 100%;
+    margin: auto;
+    border-bottom: 1px solid $dark-gray-700;
+  }
+
+  .social_medias {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+
+    .social_media__icon {
+      color: $cyan;
+      width: 18px;
+      height: 18px;
+      transition: all 0.25s;
+    }
+
+    &:hover {
+      .social_media__icon {
+        color: $pink;
+        cursor: pointer;
+      }
+    }
+  }
+}
