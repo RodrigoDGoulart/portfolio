@@ -1,0 +1,48 @@
+{
+  "pretitle": "Olá! Me chamo...",
+  "title": "Rodrigo Goulart",
+  "subtitle_prefix": "Desenvolvedor ",
+  "subtitles": [
+    {
+      "name": "Front-end",
+      "color": "#52CBFF"
+    },
+    {
+      "name": "Back-end",
+      "color": "#E252FF"
+    },
+    {
+      "name": "Fullstack",
+      "color": "#52FF77"
+    },
+    {
+      "name": "React",
+      "color": "#52CBFF"
+    },
+    {
+      "name": "Vue",
+      "color": "#52FF77"
+    },
+    {
+      "name": "React Native",
+      "color": "#7C7EFF"
+    },
+    {
+      "name": "Laravel",
+      "color": "#FF4545"
+    },
+    {
+      "name": "TypeScript",
+      "color": "#7C7EFF"
+    },
+    {
+      "name": "PHP",
+      "color": "#7C7EFF"
+    },
+    {
+      "name": "Python",
+      "color": "#52CBFF"
+    }
+  ],
+  "description": "Apaixonado por <b>tecnologia e design</b> e experiente em múltiplos projetos com foco em <b>design, usabilidade e experiência do usuário</b>, unindo funcionalidade e estética. Nos meios em que atuo, sempre sou <b>reconhecido pela criatividade e comprometimento</b>, entregando o melhor de mim."
+}

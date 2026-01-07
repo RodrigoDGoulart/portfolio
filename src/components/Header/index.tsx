@@ -27,7 +27,7 @@ const LINKS: LinkType[] = [
 ];
 
 export default function Header() {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   function handlePageClick(page: string) {
     window.location.hash = "";
