@@ -1,13 +1,13 @@
 import styles from "./Banner.module.scss";
 
-import Button from "../Button";
-import Title from "../Title";
+import Button from "../../Button";
+import Title from "../../Title";
 
-import NotebookImg from "../../assets/notebook.png";
-import ClosedNotebookImg from "../../assets/closed_notebook.png";
+import NotebookImg from "../../../assets/notebook.png";
+import ClosedNotebookImg from "../../../assets/closed_notebook.png";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import texts from "../../assets/texts.json";
+import texts from "../../../assets/texts.json";
 import classNames from "classnames";
 
 function padRight(str: string, len: number, ch = " ") {

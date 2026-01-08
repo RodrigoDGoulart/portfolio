@@ -1,4 +1,4 @@
-import Banner from "./components/Banner";
+import Banner from "./components/Sections/Banner";
 import Header from "./components/Header";
 
 function App() {
