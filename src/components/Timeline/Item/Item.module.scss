@@ -10,7 +10,6 @@
 .container {
   display: flex;
   gap: 8px;
-  max-width: 300px;
 }
 
 .content {
@@ -36,11 +35,5 @@
 }
 
 .desc {
-  text-align: justify;
-  display: -webkit-box;
-  line-clamp: 3;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-align: left;
 }

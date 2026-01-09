@@ -44,5 +44,100 @@
       "color": "#52CBFF"
     }
   ],
-  "description": "Apaixonado por <b>tecnologia e design</b> e experiente em múltiplos projetos com foco em <b>design, usabilidade e experiência do usuário</b>, unindo funcionalidade e estética. Nos meios em que atuo, sempre sou <b>reconhecido pela criatividade e comprometimento</b>, entregando o melhor de mim."
+  "description": "Apaixonado por <b>tecnologia e design</b> e experiente em múltiplos projetos com foco em <b>design, usabilidade e experiência do usuário</b>, unindo funcionalidade e estética. Nos meios em que atuo, sempre sou <b>reconhecido pela criatividade e comprometimento</b>, entregando o melhor de mim.",
+  "about_me": "Desenvolvedor Full Stack com sólida experiência em aplicações web e mobile, atuando com Laravel, Vue.js, React e Node.js. Participo do ciclo completo de desenvolvimento, desde a arquitetura e implementação de APIs até a entrega de interfaces escaláveis e de alta performance. Tenho forte domínio de versionamento com Git e metodologias ágeis (Scrum), aplicando boas práticas de clean code e design de software. Busco constantemente elevar a qualidade das soluções digitais, explorando Inteligência Artificial e novas tecnologias para gerar inovação e valor ao negócio.",
+  "jobs": [
+    {
+      "title": "Desenvolvedor Mobile/Front-end",
+      "subtitle": "Tria Software (Outubro/2025 - Atual)",
+      "desc": "- Participação no time de desenvolvimento de aplicação mobile de gestão de conflitos com tecnologia GIS;\n- Responsável pela arquitetura front-end, implementação de novas funcionalidades, versionamento e entregas de sprint;\n- Colaboração com demais times de desenvolvimento, visando garantir consistência UX/UI e entregas de alta qualidade;\n- Manutenção, otimização e evolução da aplicação principal;",
+      "badges": [
+        "react-native",
+        "react",
+        "arcgis",
+        "android",
+        "azure-devops"
+      ]
+    },
+    {
+      "title": "Desenvolvedor Full Stack",
+      "subtitle": "Boostech (Março/2025 - Outubro/2025)",
+      "desc": "- Participação ativa no desenvolvimento e evolução de aplicação web YMS utilizando Laravel e Vue, entregando constantes melhorias de usabilidade, performance e escalabilidade;\n- Implementação e desenvolvimento de aplicação android com React Native/Expo, integrando funções nativas e expandindo e aumentando a qualidade da aplicação;\n- Entrega de funcionalidades de alto impacto, alinhado com boas práticas de experiência do usuário e arquitetura de software;\n- Definição e aplicação de boas práticas de desenvolvimento com o time, incluindo Clean Code, Conventional Commits e melhorias do controle de versão e workflow;",
+      "badges": [
+        "php",
+        "laravel",
+        "javascript",
+        "vue",
+        "react-native",
+        "android"
+      ]
+    },
+    {
+      "title": "Desenvolvedor Front-end/GIS",
+      "subtitle": "Imagem (Setembro/2022 - Março/2025)",
+      "desc": "- Desenvolvimento de aplicações interativas focado em GIS com React, Typescript, ArcGIS API e ArcGIS Experience Builder;\n- Criação de scripts Python para automação de workflow e processamento de dados geoespaciais;\n- Paritipação de consultorias técnicas para mapeamento e desenvolvimento de aplicações nativas ArcGIS, dando suporte à clientes desde o design até a implementação de soluções GIS;",
+      "badges": [
+        "arcgis",
+        "python",
+        "react",
+        "typescript"
+      ]
+    }
+  ],
+  "stacks": [
+    {
+      "name": "Linguagens",
+      "badges": [
+        "python",
+        "javascript",
+        "typescript",
+        "java"
+      ]
+    },
+    {
+      "name": "Front-end",
+      "badges": [
+        "react",
+        "react-native",
+        "next",
+        "vue",
+        "angular",
+        "sass",
+        "material-ui",
+        "vuetify",
+        "tailwind-css"
+      ]
+    },
+    {
+      "name": "Back-end",
+      "badges": [
+        "node",
+        "flask",
+        "laravel"
+      ]
+    },
+    {
+      "name": "Banco de dados",
+      "badges": [
+        "mysql",
+        "postgre",
+        "mongodb"
+      ]
+    },
+    {
+      "name": "Extras",
+      "badges": [
+        "arcgis",
+        "git",
+        "github",
+        "azure-devops",
+        "jira",
+        "vercel",
+        "renderer",
+        "figma",
+        "open-ai",
+        "ollama"
+      ]
+    }
+  ]
 }
