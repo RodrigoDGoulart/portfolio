@@ -37,7 +37,7 @@ export default function Card({ content }: Props) {
   return (
     <div className={styles.card}>
       <img
-        src={content.image_url}
+        src={content.image_url || imgFallback}
         alt={content.title}
         onError={(e) => {
           e.currentTarget.onerror = null;

@@ -141,7 +141,7 @@ export const JavaBadge: BadgeType = {
 
 export const NextBadge: BadgeType = {
   color: {
-    primary: "#4d4d4dff",
+    primary: "#1f1f1fff",
     secondary: "white",
   },
   icon: nextIcon,
@@ -204,7 +204,7 @@ export const NodeBadge: BadgeType = {
 
 export const FlaskBadge: BadgeType = {
   color: {
-    primary: "#4d4d4dff",
+    primary: "#1f1f1fff",
     secondary: "white",
   },
   icon: flaskIcon,
@@ -249,7 +249,7 @@ export const GitBadge: BadgeType = {
 
 export const GitHubBadge: BadgeType = {
   color: {
-    primary: "#4d4d4dff",
+    primary: "#1f1f1fff",
     secondary: "white",
   },
   icon: githubIcon,
@@ -267,7 +267,7 @@ export const JiraBadge: BadgeType = {
 
 export const VercelBadge: BadgeType = {
   color: {
-    primary: "#4d4d4dff",
+    primary: "#1f1f1fff",
     secondary: "white",
   },
   icon: vercelIcon,
@@ -276,7 +276,7 @@ export const VercelBadge: BadgeType = {
 
 export const RendererBadge: BadgeType = {
   color: {
-    primary: "#4d4d4dff",
+    primary: "#1f1f1fff",
     secondary: "white",
   },
   icon: rendererIcon,
@@ -285,7 +285,7 @@ export const RendererBadge: BadgeType = {
 
 export const FigmaBadge: BadgeType = {
   color: {
-    primary: "#4d4d4dff",
+    primary: "#1f1f1fff",
     secondary: "white",
   },
   icon: figmaIcon,
@@ -294,7 +294,7 @@ export const FigmaBadge: BadgeType = {
 
 export const OpenAiBadge: BadgeType = {
   color: {
-    primary: "#363636ff",
+    primary: "#1f1f1fff",
     secondary: "white",
   },
   icon: openaiIcon,
@@ -303,7 +303,7 @@ export const OpenAiBadge: BadgeType = {
 
 export const OllamaBadge: BadgeType = {
   color: {
-    primary: "#363636ff",
+    primary: "#1f1f1fff",
     secondary: "white",
   },
   icon: ollamaIcon,

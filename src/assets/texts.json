@@ -139,5 +139,75 @@
         "ollama"
       ]
     }
+  ],
+  "projects_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut urna arcu, pharetra et volutpat vel, ornare semper orci. In sagittis eros tempor tellus maximus laoreet ut id nisl. Maecenas id efficitur nulla. Fusce vel lectus diam. Integer gravida, augue in viverra ornare, mi arcu fringilla libero, in finibus metus mauris ac lacus.",
+  "projects": [
+    {
+      "image": "images/project_imgs/sample-img.png",
+      "title": "projeto embraer",
+      "subtitle": "subtitle",
+      "badges": [
+        "react",
+        "tailwind-css",
+        "node",
+        "mysql"
+      ],
+      "desc": "desc",
+      "links": [
+        {
+          "name": "Github",
+          "url": "https://github.com/RodrigoDGoulart"
+        },
+        {
+          "name": "Project",
+          "url": "https://linkedin.com/RodrigoDGoulart"
+        }
+      ]
+    },
+    {
+      "image": "images/project_imgs/sample-img.png",
+      "title": "mobile gis",
+      "subtitle": "subtitle",
+      "badges": [
+        "arcgis",
+        "react-native",
+        "android",
+        "node",
+        "mongodb"
+      ],
+      "desc": "desc",
+      "links": [
+        {
+          "name": "Github",
+          "url": "https://github.com/RodrigoDGoulart"
+        },
+        {
+          "name": "Project",
+          "url": "https://linkedin.com/RodrigoDGoulart"
+        }
+      ]
+    },
+    {
+      "image": "images/project_imgs/sample-img.png",
+      "title": "projeto visão ia",
+      "subtitle": "subtitle",
+      "badges": [
+        "open-ai",
+        "vue",
+        "vuetify",
+        "vercel"
+      ],
+      "desc": "desc",
+      "links": [
+        {
+          "name": "Github",
+          "url": "https://github.com/RodrigoDGoulart"
+        },
+        {
+          "name": "Project",
+          "url": "https://linkedin.com/RodrigoDGoulart"
+        }
+      ]
+    }
   ]
 }
