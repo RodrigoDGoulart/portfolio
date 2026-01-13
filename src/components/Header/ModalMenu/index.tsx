@@ -33,7 +33,9 @@ export default function ModalMenu(props: Props) {
       className={classNames(styles.overlay, { [styles["closing"]]: isClosing })}
       onClick={handleClose}
     >
-      <div className={classNames(styles.menu, { [styles["closing"]]: isClosing })}>
+      <div
+        className={classNames(styles.menu, { [styles["closing"]]: isClosing })}
+      >
         <HamburguerIcon onClick={handleClose} className={styles.hamb_icon} />
         <ul>
           {props.pageLinks.map((link) => (
@@ -50,11 +52,12 @@ export default function ModalMenu(props: Props) {
         <div className={styles.divisor}></div>
         <div className={styles.social_medias}>
           {props.socialMedia.map((socialMedia) => (
-            <button key={socialMedia.url}>
-              <socialMedia.icon
-                className={styles.social_media__icon}
-                onClick={() => props.onSocialMediaClick(socialMedia.url)}
-              />
+            <button
+              key={socialMedia.url}
+              onClick={() => props.onSocialMediaClick(socialMedia.url)}
+            >
+              <socialMedia.icon className={styles.social_media__icon} />
+              <span>{socialMedia.label}</span>
             </button>
           ))}
         </div>
