@@ -1,4 +1,10 @@
 {
+  "contacts": {
+    "whatsapp": "5512996626277",
+    "linkedin": "/rodrigo-diniz-goulart",
+    "github": "RodrigoDGoulart",
+    "email": "rodinizgoulart@gmail.com"
+  },
   "pretitle": "Olá! Me chamo...",
   "title": "Rodrigo Goulart",
   "subtitle_prefix": "Desenvolvedor ",

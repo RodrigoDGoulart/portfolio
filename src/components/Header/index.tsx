@@ -11,14 +11,29 @@ import { LinkType, SocialMediaType } from "../../@types";
 
 import Button from "../Button";
 import ModalMenu from "./ModalMenu";
+
 import { useState } from "react";
 
-const SOCIAL_MEDIA: SocialMediaType[] = [
-  { icon: WhatsappIcon, url: "https://wa.me/5512996626277" },
-  { icon: EmailIcon, url: "mailto:rodinizgoulart@gmail.com" },
-  { icon: GithubIcon, url: "https://github.com/RodrigoDGoulart" },
-  { icon: LinkedinIcon, url: "https://linkedin.com/in/rodrigo-diniz-goulart" },
-];
+import texts from "../../assets/texts.json";
+
+const SOCIAL_MEDIA: SocialMediaType[] = [];
+if (texts.contacts.whatsapp)
+  SOCIAL_MEDIA.push({
+    icon: WhatsappIcon,
+    url: `https://wa.me/${texts.contacts.whatsapp}`,
+  });
+if (texts.contacts.email)
+  SOCIAL_MEDIA.push({ icon: EmailIcon, url: `mailto:${texts.contacts.email}` });
+if (texts.contacts.github)
+  SOCIAL_MEDIA.push({
+    icon: GithubIcon,
+    url: `https://github.com/${texts.contacts.github}`,
+  });
+if (texts.contacts.linkedin)
+  SOCIAL_MEDIA.push({
+    icon: LinkedinIcon,
+    url: `https://linkedin.com/in/${texts.contacts.linkedin}`,
+  });
 
 const LINKS: LinkType[] = [
   { label: "Início", url: "#home" },
