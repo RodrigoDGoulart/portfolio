@@ -224,8 +224,8 @@ export default function Banner() {
         />
 
         <div className={styles.btns_row}>
-          <Button onClick={downloadPdf}>Baixar currículo (PDF)</Button>
-          <Button styleType="secondary">Contato</Button>
+          <Button className={styles.btn} onClick={downloadPdf}>Baixar currículo (PDF)</Button>
+          <Button className={styles.btn} styleType="secondary">Contato</Button>
         </div>
       </div>
 

@@ -2,10 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-block: 96px;
   gap: 16px;
-  max-width: 1000px;
-  margin: auto;
+  width: 90%;
+  max-width: 1500px;
+  height: 100vh;
+  margin: -60px auto;
+  margin-bottom: 60px;
 }
 
 .content {
@@ -17,7 +19,7 @@
 
 .subtitle {
   font-weight: bold;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .titles_row {
@@ -27,7 +29,8 @@
 }
 
 .paragraph {
-  line-height: 20px;
+  line-height: 28px;
+  font-size: 18px;
   b {
     color: $pink;
   }
@@ -37,6 +40,11 @@
   display: flex;
   align-items: center;
   gap: 16px;
+
+  .btn {
+    padding: 12px 24px;
+    border-radius: 16px;
+  }
 }
 
 .banner_img {
