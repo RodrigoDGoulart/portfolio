@@ -51,6 +51,25 @@ function lerpColor(fromHex: string, toHex: string, t: number) {
   return `rgb(${r}, ${g}, ${b2})`;
 }
 
+async function downloadPdf() {
+  const url = `/files/${texts.curriculum}`;
+
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("Falha ao baixar o arquivo");
+
+  const blob = await res.blob();
+  const blobUrl = window.URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = blobUrl;
+  a.download = texts.curriculum;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+
+  window.URL.revokeObjectURL(blobUrl);
+}
+
 export default function Banner() {
   const [wordIndex, setWordIndex] = useState(0);
   const [displayText, setDisplayText] = useState(texts.subtitles[0].name);
@@ -205,7 +224,7 @@ export default function Banner() {
         />
 
         <div className={styles.btns_row}>
-          <Button>Baixar currículo (PDF)</Button>
+          <Button onClick={downloadPdf}>Baixar currículo (PDF)</Button>
           <Button styleType="secondary">Contato</Button>
         </div>
       </div>
