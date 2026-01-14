@@ -67,10 +67,10 @@ class Firefly {
 
 let f = [];
 
-function draw(color) {
+function draw(color, quantity = 76) {
   // quantidade total e taxa de spawn (ajustáveis)
-  const MAX = 60;
-  const SPAWN_PER_FRAME = 4; // antes era 10 por chamada; com 2 fica mais leve e suave
+  const MAX = quantity;
+  const SPAWN_PER_FRAME = 2; // antes era 10 por chamada; com 2 fica mais leve e suave
 
   if (f.length < MAX) {
     for (let j = 0; j < SPAWN_PER_FRAME; j++) {
@@ -130,7 +130,7 @@ window.requestAnimFrame = (function () {
 function loop() {
   window.requestAnimFrame(loop);
   c.clearRect(0, 0, w, h);
-  draw("#E252FF");
+  draw("#d64fffff");
 }
 
 window.addEventListener("resize", function () {

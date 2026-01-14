@@ -62,13 +62,13 @@ table {
 
 canvas {
   position: absolute;
-	background-color: #52CBFF;
+	background-color: #7101EC;
   top: 0;
   width: 100%;
   z-index: -1;
 
-  filter: blur(48px);
-  opacity: 0.2;
+  filter: blur(72px);
+  opacity: 0.4;
 
   /* 🔥 Fade vertical de opacidade */
   -webkit-mask-image: linear-gradient(
