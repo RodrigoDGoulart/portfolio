@@ -9,6 +9,9 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import texts from "../../../assets/texts.json";
 import classNames from "classnames";
+import ActionButton from "../../ActionButton";
+import { SOCIAL_MEDIA } from "../../../constants/socialMedia.constants";
+import { SocialMediaType } from "../../../@types";
 
 function padRight(str: string, len: number, ch = " ") {
   if (str.length >= len) return str;
@@ -70,10 +73,14 @@ async function downloadPdf() {
   window.URL.revokeObjectURL(blobUrl);
 }
 
+function handleSocialMediaClick(socialMedia: SocialMediaType) {
+  window.open(socialMedia.url, "_blank");
+}
+
 export default function Banner() {
   const [wordIndex, setWordIndex] = useState(0);
   const [displayText, setDisplayText] = useState(texts.subtitles[0].name);
-  const [displayColor, setDisplayColor] = useState(texts.subtitles[0].color); // <- cor renderizada
+  const [displayColor, setDisplayColor] = useState(texts.subtitles[0].color);
   const [isOpened, setIsOpened] = useState(false);
   const [notebookEnter, setNotebookEnter] = useState(false);
 
@@ -224,8 +231,21 @@ export default function Banner() {
         />
 
         <div className={styles.btns_row}>
-          <Button className={styles.btn} onClick={downloadPdf}>Baixar currículo (PDF)</Button>
-          <Button className={styles.btn} styleType="secondary">Contato</Button>
+          <Button className={styles.btn} onClick={downloadPdf}>
+            Baixar currículo (PDF)
+          </Button>
+          <ActionButton
+            button={
+              <Button className={styles.btn} styleType="secondary">
+                Contato
+              </Button>
+            }
+            options={SOCIAL_MEDIA.map((item) => ({
+              icon: item.icon,
+              label: item.label,
+              onClick: () => handleSocialMediaClick(item),
+            }))}
+          />
         </div>
       </div>
 
