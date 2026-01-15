@@ -18,7 +18,9 @@ export type Project = {
   title: string;
   subtitle: string;
   image_url: string;
+  slides: string[];
   desc: string;
+  details: string;
   badges: BadgeType[];
   links: {
     label: string;

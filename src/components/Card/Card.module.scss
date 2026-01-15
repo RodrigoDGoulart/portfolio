@@ -6,7 +6,7 @@
   width: 100%;
   height: 186px;
 
-  img {
+  .thumbnail {
     object-fit: cover;
     width: 210px;
     height: 100%;
@@ -32,6 +32,7 @@
     }
 
     .desc {
+      flex: 1;
       font-size: 12px;
       text-align: justify;
       display: -webkit-box;
@@ -39,6 +40,21 @@
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
+    }
+
+    .expand_area {
+      overflow: hidden;
+      transition: max-height 350ms ease, opacity 250ms ease, transform 350ms ease;
+      will-change: max-height, opacity, transform;
+
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(-6px);
+
+      .details {
+        font-size: 14px;
+        text-align: justify;
+      }
     }
 
     .badges,
@@ -59,17 +75,92 @@
       font-weight: bold;
       font-size: 14px;
     }
+
+    .expand_row {
+      display: flex;
+      justify-content: center;
+
+      .expand_btn {
+        color: $cyan;
+        transition: color 0.5s;
+
+        &:hover {
+          color: $pink;
+          cursor: pointer;
+        }
+
+        .icon {
+          width: 16px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  &.expanded {
+    flex-direction: column;
+    height: auto;
+
+    .content {
+      gap: 14px;
+      padding: 12px 12px;
+
+      .desc {
+        font-size: 14px;
+      }
+    }
   }
 }
 
-@media(max-width: $mobile-breakpoint) {
+.media {
+  position: relative;
+  width: 210px;
+  height: 186px;
+
+  .media_layer {
+    position: absolute;
+    inset: 0;
+    transition: opacity 250ms ease, transform 350ms ease;
+  }
+
+  .show {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+
+  .hide {
+    opacity: 0;
+    transform: scale(0.98);
+    pointer-events: none;
+  }
+}
+
+@media (max-width: calc($mobile-breakpoint + 400px)) {
+  .card {
+    .content {
+      .badges {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
   .card {
     flex-direction: column;
     height: auto;
 
-    img {
+    .thumbnail {
       width: 100%;
       height: auto;
     }
+
+    .content {
+      .badges {
+        display: none;
+      }
+    }
+
   }
 }

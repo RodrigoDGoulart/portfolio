@@ -24,14 +24,17 @@ function normalize(str: string) {
 
 export default function Projects() {
   const [search, setSearch] = useState("");
+  const [expandedIndex, setExpandedIndex] = useState(NaN);
 
   // 1) lista base (mapeada do JSON) - não depende de search
   const allItems = useMemo<ProjectType[]>(() => {
     return texts.projects.map((project) => ({
       title: project.title,
       subtitle: project.subtitle,
-      image_url: project.image,
+      image_url: project.imgs?.[0],
+      slides: project.imgs,
       desc: project.desc,
+      details: project.details,
       badges: project.badges.map((badge) => getBadgeData(badge)),
       links: project.links.map((link) => {
         const isGithub = link.url.startsWith("https://github.com");
@@ -46,6 +49,8 @@ export default function Projects() {
 
   // 2) filtra conforme search
   const filteredItems = useMemo(() => {
+    setExpandedIndex(NaN);
+
     const q = normalize(search);
     if (!q) return allItems;
 
@@ -86,7 +91,16 @@ export default function Projects() {
 
       <div className={styles.projects_container}>
         {filteredItems.map((project, index) => (
-          <Card key={index} content={project} />
+          <Card
+            key={index}
+            content={project}
+            expaned={index === expandedIndex}
+            onExpandClick={() =>
+              index !== expandedIndex
+                ? setExpandedIndex(index)
+                : setExpandedIndex(NaN)
+            }
+          />
         ))}
       </div>
     </div>

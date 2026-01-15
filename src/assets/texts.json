@@ -151,7 +151,10 @@
   "projects_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut urna arcu, pharetra et volutpat vel, ornare semper orci. In sagittis eros tempor tellus maximus laoreet ut id nisl. Maecenas id efficitur nulla. Fusce vel lectus diam. Integer gravida, augue in viverra ornare, mi arcu fringilla libero, in finibus metus mauris ac lacus.",
   "projects": [
     {
-      "image": "images/project_imgs/sample-img.png",
+      "imgs": [
+        "images/project_imgs/sample-img.png",
+        "images/project_imgs/sample-img-2.png"
+      ],
       "title": "projeto embraer",
       "subtitle": "subtitle",
       "badges": [
@@ -161,6 +164,7 @@
         "mysql"
       ],
       "desc": "desc",
+      "details": "details text",
       "links": [
         {
           "name": "Github",
@@ -173,7 +177,10 @@
       ]
     },
     {
-      "image": "images/project_imgs/sample-img.png",
+      "imgs": [
+        "images/project_imgs/sample-img.png",
+        "images/project_imgs/sample-img-2.png"
+      ],
       "title": "mobile gis",
       "subtitle": "subtitle",
       "badges": [
@@ -184,6 +191,7 @@
         "mongodb"
       ],
       "desc": "desc",
+      "details": "details text",
       "links": [
         {
           "name": "Github",
@@ -196,7 +204,10 @@
       ]
     },
     {
-      "image": "images/project_imgs/sample-img.png",
+      "imgs": [
+        "images/project_imgs/sample-img.png",
+        "images/project_imgs/sample-img-2.png"
+      ],
       "title": "projeto visão ia",
       "subtitle": "subtitle",
       "badges": [
@@ -206,6 +217,7 @@
         "vercel"
       ],
       "desc": "desc",
+      "details": "details text",
       "links": [
         {
           "name": "Github",
