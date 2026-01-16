@@ -15,8 +15,10 @@
     "classnames": "^2.5.1",
     "embla-carousel": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
+    "i18next": "^25.7.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^16.5.3",
     "rodrigo-goulart-portfolio": "file:",
     "sass": "^1.85.1"
   },

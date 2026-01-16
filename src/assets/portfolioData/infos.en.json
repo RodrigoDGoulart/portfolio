@@ -1,0 +1,230 @@
+{
+  "curriculum": "rodrigo-goulart-curriculum-2025-12.pdf",
+  "contacts": {
+    "whatsapp": "5512996626277",
+    "whatsapp_label": "+55 (12) 99662-6277",
+    "linkedin": "/rodrigo-diniz-goulart",
+    "github": "RodrigoDGoulart",
+    "email": "rodinizgoulart@gmail.com"
+  },
+  "title": "Rodrigo Goulart",
+  "subtitles": [
+    {
+      "name": "Front-end",
+      "color": "#52CBFF"
+    },
+    {
+      "name": "Back-end",
+      "color": "#E252FF"
+    },
+    {
+      "name": "Fullstack",
+      "color": "#52FF77"
+    },
+    {
+      "name": "React",
+      "color": "#52CBFF"
+    },
+    {
+      "name": "Vue",
+      "color": "#52FF77"
+    },
+    {
+      "name": "React Native",
+      "color": "#7C7EFF"
+    },
+    {
+      "name": "Laravel",
+      "color": "#FF4545"
+    },
+    {
+      "name": "TypeScript",
+      "color": "#7C7EFF"
+    },
+    {
+      "name": "PHP",
+      "color": "#7C7EFF"
+    },
+    {
+      "name": "Python",
+      "color": "#52CBFF"
+    }
+  ],
+  "description": "Passionate about <b>technology, design</b> and experienced in multiple projects focused on <b>design, usability, and user experience</b>, combining functionality and aesthetics. In the environments where I work, I am always <b>recognized for creativity and commitment</b>, delivering the best of myself.",
+  "about_me": "Full Stack Developer with solid experience in web and mobile applications, working with Laravel, Vue.js, React, and Node.js. I participate in the complete development cycle, from API architecture and implementation to the delivery of scalable, high-performance interfaces. I have strong expertise in version control with Git and agile methodologies (Scrum), applying clean code and software design best practices. I constantly seek to elevate the quality of digital solutions, exploring Artificial Intelligence and new technologies to generate innovation and business value.",
+  "jobs": [
+    {
+      "title": "Mobile/Front-end Developer",
+      "subtitle": "Tria Software (October/2025 - Present)",
+      "desc": "- Participation in the development team of a mobile application for conflict management using GIS technology;\n- Responsible for front-end architecture, implementation of new features, versioning, and sprint deliveries;\n- Collaboration with other development teams to ensure UX/UI consistency and high-quality deliveries;\n- Maintenance, optimization, and evolution of the main application;",
+      "badges": [
+        "react-native",
+        "react",
+        "arcgis",
+        "android",
+        "azure-devops"
+      ]
+    },
+    {
+      "title": "Full Stack Developer",
+      "subtitle": "Boostech (March/2025 - October/2025)",
+      "desc": "- Active participation in the development and evolution of a YMS web application using Laravel and Vue, delivering continuous improvements in usability, performance, and scalability;\n- Implementation and development of an Android application with React Native/Expo, integrating native features and expanding and improving application quality;\n- Delivery of high-impact features aligned with best practices in user experience and software architecture;\n- Definition and application of development best practices with the team, including Clean Code, Conventional Commits, and improvements to version control and workflow;",
+      "badges": [
+        "php",
+        "laravel",
+        "javascript",
+        "vue",
+        "react-native",
+        "android"
+      ]
+    },
+    {
+      "title": "Front-end/GIS Developer",
+      "subtitle": "Imagem (September/2022 - March/2025)",
+      "desc": "- Development of interactive GIS-focused applications using React, TypeScript, ArcGIS API, and ArcGIS Experience Builder;\n- Creation of Python scripts for workflow automation and geospatial data processing;\n- Participation in technical consulting for mapping and development of native ArcGIS applications, supporting clients from design to the implementation of GIS solutions;",
+      "badges": [
+        "arcgis",
+        "python",
+        "react",
+        "typescript"
+      ]
+    }
+  ],
+  "stacks": [
+    {
+      "name": "Languages",
+      "badges": [
+        "python",
+        "javascript",
+        "typescript",
+        "java"
+      ]
+    },
+    {
+      "name": "Front-end",
+      "badges": [
+        "react",
+        "react-native",
+        "next",
+        "vue",
+        "angular",
+        "sass",
+        "material-ui",
+        "vuetify",
+        "tailwind-css"
+      ]
+    },
+    {
+      "name": "Back-end",
+      "badges": [
+        "node",
+        "flask",
+        "laravel"
+      ]
+    },
+    {
+      "name": "Databases",
+      "badges": [
+        "mysql",
+        "postgre",
+        "mongodb"
+      ]
+    },
+    {
+      "name": "Extras",
+      "badges": [
+        "arcgis",
+        "git",
+        "github",
+        "azure-devops",
+        "jira",
+        "vercel",
+        "renderer",
+        "figma",
+        "open-ai",
+        "ollama"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "imgs": [
+        "images/project_imgs/sample-img.png",
+        "images/project_imgs/sample-img-2.png"
+      ],
+      "title": "embraer project",
+      "subtitle": "subtitle",
+      "badges": [
+        "react",
+        "tailwind-css",
+        "node",
+        "mysql"
+      ],
+      "desc": "desc",
+      "details": "details text",
+      "links": [
+        {
+          "name": "Github",
+          "url": "https://github.com/RodrigoDGoulart"
+        },
+        {
+          "name": "Project",
+          "url": "https://linkedin.com/RodrigoDGoulart"
+        }
+      ]
+    },
+    {
+      "imgs": [
+        "images/project_imgs/sample-img.png",
+        "images/project_imgs/sample-img-2.png"
+      ],
+      "title": "mobile gis",
+      "subtitle": "subtitle",
+      "badges": [
+        "arcgis",
+        "react-native",
+        "android",
+        "node",
+        "mongodb"
+      ],
+      "desc": "desc",
+      "details": "details text",
+      "links": [
+        {
+          "name": "Github",
+          "url": "https://github.com/RodrigoDGoulart"
+        },
+        {
+          "name": "Project",
+          "url": "https://linkedin.com/RodrigoDGoulart"
+        }
+      ]
+    },
+    {
+      "imgs": [
+        "images/project_imgs/sample-img.png",
+        "images/project_imgs/sample-img-2.png"
+      ],
+      "title": "ai vision project",
+      "subtitle": "subtitle",
+      "badges": [
+        "open-ai",
+        "vue",
+        "vuetify",
+        "vercel"
+      ],
+      "desc": "desc",
+      "details": "details text",
+      "links": [
+        {
+          "name": "Github",
+          "url": "https://github.com/RodrigoDGoulart"
+        },
+        {
+          "name": "Project",
+          "url": "https://linkedin.com/RodrigoDGoulart"
+        }
+      ]
+    }
+  ]
+}

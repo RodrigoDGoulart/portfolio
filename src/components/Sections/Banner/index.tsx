@@ -7,11 +7,12 @@ import NotebookImg from "../../../assets/notebook.png";
 import ClosedNotebookImg from "../../../assets/closed_notebook.png";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import texts from "../../../assets/texts.json";
 import classNames from "classnames";
 import ActionButton from "../../ActionButton";
-import { SOCIAL_MEDIA } from "../../../constants/socialMedia.constants";
+import { getSocialMediaArray } from "../../../constants/socialMedia.constants";
 import { SocialMediaType } from "../../../@types";
+import { useTranslation } from "react-i18next";
+import { getPortfolioData } from "../../../constants/portfolioData.constants";
 
 function padRight(str: string, len: number, ch = " ") {
   if (str.length >= len) return str;
@@ -54,30 +55,16 @@ function lerpColor(fromHex: string, toHex: string, t: number) {
   return `rgb(${r}, ${g}, ${b2})`;
 }
 
-async function downloadPdf() {
-  const url = `/files/${texts.curriculum}`;
-
-  const res = await fetch(url);
-  if (!res.ok) throw new Error("Falha ao baixar o arquivo");
-
-  const blob = await res.blob();
-  const blobUrl = window.URL.createObjectURL(blob);
-
-  const a = document.createElement("a");
-  a.href = blobUrl;
-  a.download = texts.curriculum;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-
-  window.URL.revokeObjectURL(blobUrl);
-}
-
 function handleSocialMediaClick(socialMedia: SocialMediaType) {
   window.open(socialMedia.url, "_blank");
 }
 
 export default function Banner() {
+  const { t } = useTranslation();
+  const texts = getPortfolioData();
+
+  const SOCIAL_MEDIA = getSocialMediaArray();
+
   const [wordIndex, setWordIndex] = useState(0);
   const [displayText, setDisplayText] = useState(texts.subtitles[0].name);
   const [displayColor, setDisplayColor] = useState(texts.subtitles[0].color);
@@ -110,6 +97,25 @@ export default function Banner() {
     return RANDOM_ORDER ? shuffle(base) : base;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [wordIndex]);
+
+  async function downloadPdf() {
+    const url = `/files/${texts.curriculum}`;
+
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("Falha ao baixar o arquivo");
+
+    const blob = await res.blob();
+    const blobUrl = window.URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = blobUrl;
+    a.download = texts.curriculum;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    window.URL.revokeObjectURL(blobUrl);
+  }
 
   useEffect(() => {
     // garante cor certa quando troca a palavra
@@ -206,13 +212,13 @@ export default function Banner() {
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.titles_row}>
-          <Title size="h1">{texts.pretitle}</Title>
+          <Title size="h1">{t("banner.pretitle")}</Title>
           <Title hightlight size="banner">
             {texts.title}
           </Title>
 
           <div className={styles.subtitle}>
-            {texts.subtitle_prefix}
+            {t("banner.prefixsubtitle")}
             <b
               style={{
                 color: displayColor,
@@ -222,6 +228,7 @@ export default function Banner() {
             >
               {displayText}
             </b>
+            {t("banner.sufixsubtitle")}
           </div>
         </div>
 
@@ -232,12 +239,12 @@ export default function Banner() {
 
         <div className={styles.btns_row}>
           <Button className={styles.btn} onClick={downloadPdf}>
-            Baixar currículo (PDF)
+            {t("banner.download_curriculum")}
           </Button>
           <ActionButton
             button={
               <Button className={styles.btn} styleType="secondary">
-                Contato
+                {t("banner.contact")}
               </Button>
             }
             options={SOCIAL_MEDIA.map((item) => ({

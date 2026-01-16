@@ -7,12 +7,13 @@ import styles from "./Projects.module.scss";
 import searchIcon from "../../../assets/icons/search.svg?react";
 import githubIcon from "../../../assets/icons/github.svg?react";
 import openLinkIcon from "../../../assets/icons/openlink.svg?react";
-import texts from "../../../assets/texts.json";
 
 import Card from "../../Card";
 
 import { getBadgeData } from "../../../constants/badges.constants";
 import { BadgeType, Project as ProjectType } from "../../../@types";
+import { useTranslation } from "react-i18next";
+import { getPortfolioData } from "../../../constants/portfolioData.constants";
 
 function normalize(str: string) {
   return str
@@ -23,6 +24,9 @@ function normalize(str: string) {
 }
 
 export default function Projects() {
+  const { t } = useTranslation();
+  const texts = getPortfolioData();
+
   const [search, setSearch] = useState("");
   const [expandedIndex, setExpandedIndex] = useState(NaN);
 
@@ -45,7 +49,7 @@ export default function Projects() {
         };
       }),
     }));
-  }, []);
+  }, [texts]);
 
   // 2) filtra conforme search
   const filteredItems = useMemo(() => {
@@ -76,17 +80,17 @@ export default function Projects() {
   return (
     <div id="projects" className={styles.container}>
       <Title className={styles.title} hightlight>
-        Projetos
+        {t("header.projects")}
       </Title>
 
-      <div className={styles.desc}>{texts.projects_desc}</div>
+      <div className={styles.desc}>{t("projects.description")}</div>
 
       <Input
         icon={searchIcon}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         className={styles.search_input}
-        placeholder="Pesquisar por nome, tecnologia, empresa..."
+        placeholder={t("projects.search_placeholder")}
       />
 
       <div className={styles.projects_container}>

@@ -4,7 +4,6 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { cloneElement } from "react";
 
 import { IconType } from "../../@types";
-import Button from "../Button";
 
 interface Props {
   options: {
@@ -12,10 +11,8 @@ interface Props {
     label: string;
     onClick: () => void;
   }[];
-  button: React.ReactElement<
-    React.ComponentProps<typeof Button>,
-    typeof Button
-  >;
+  button: React.ReactElement<HTMLButtonElement>;
+  dropdownMenuProps?: DropdownMenu.DropdownMenuContentProps;
 }
 
 export default function ActionButton(props: Props) {
@@ -34,12 +31,15 @@ export default function ActionButton(props: Props) {
       sideOffset: 6,
     };
 
-    const ContentProps = mode === "mobile" ? mobileProps : deskProps;
+    const ContentProps = {
+      ...(mode === "mobile" ? mobileProps : deskProps),
+      ...props.dropdownMenuProps,
+    };
 
     return (
       <>
         <DropdownMenu.Trigger asChild>
-          {cloneElement(props.button, { "aria-label": "Abrir menu" })}
+          {cloneElement(props.button)}
         </DropdownMenu.Trigger>
         <DropdownMenu.Portal>
           <DropdownMenu.Content

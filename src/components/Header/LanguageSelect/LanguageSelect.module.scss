@@ -1,0 +1,41 @@
+.btn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+
+  .flag_border {
+    transition: all 0.5s;
+    border: 2px solid $cyan;
+    border-radius: 100%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .country_flag {
+    width: 20px;
+    height: auto;
+  }
+
+  .arrow {
+    transition: all 0.5s;
+    width: 12px;
+    height: auto;
+    color: $cyan;
+  }
+
+  &:hover {
+    .arrow {
+      color: $pink
+    }
+
+    .flag_border {
+      border-color: $pink;
+    }
+  }
+}

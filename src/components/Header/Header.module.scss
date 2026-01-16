@@ -19,6 +19,11 @@
     gap: 12px;
   }
 
+  .right_content {
+    display: flex;
+    gap: 12px;
+  }
+
   .social_media {
     display: flex;
     gap: 12px;
@@ -27,18 +32,18 @@
       background: none;
       border: none;
       padding: 0;
-
+      cursor: pointer;
+      
       .social_media__icon {
         color: $cyan;
         width: 18px;
         height: 18px;
         transition: all 0.25s;
       }
-
+      
       &:hover {
         .social_media__icon {
           color: $pink;
-          cursor: pointer;
         }
       }
     }
@@ -62,7 +67,14 @@
       }
     }
 
-    nav, .social_media {
+    .lang_select_div {
+      position: absolute;
+      top: 16px;
+      right: 12px;
+    }
+
+    nav,
+    .social_media {
       display: none;
     }
 

@@ -1,34 +1,48 @@
-import { SocialMediaType } from "../@types";
+import { LanguageType, SocialMediaType } from "../@types";
 
-import texts from "../assets/texts.json";
+import textsPt from "../assets/infos.pt.json";
+import textsEn from "../assets/infos.en.json";
 
 import WhatsappIcon from "../assets/icons/whatsapp.svg?react";
 import EmailIcon from "../assets/icons/email.svg?react";
 import GithubIcon from "../assets/icons/github.svg?react";
 import LinkedinIcon from "../assets/icons/linkedin.svg?react";
+import i18next from "i18next";
 
-export const SOCIAL_MEDIA: SocialMediaType[] = [];
-if (texts.contacts.whatsapp)
-  SOCIAL_MEDIA.push({
-    icon: WhatsappIcon,
-    url: `https://wa.me/${texts.contacts.whatsapp}`,
-    label: texts.contacts.whatsapp_label,
-  });
-if (texts.contacts.email)
-  SOCIAL_MEDIA.push({
-    icon: EmailIcon,
-    url: `mailto:${texts.contacts.email}`,
-    label: texts.contacts.email,
-  });
-if (texts.contacts.github)
-  SOCIAL_MEDIA.push({
-    icon: GithubIcon,
-    url: `https://github.com/${texts.contacts.github}`,
-    label: texts.contacts.github,
-  });
-if (texts.contacts.linkedin)
-  SOCIAL_MEDIA.push({
-    icon: LinkedinIcon,
-    url: `https://linkedin.com/in/${texts.contacts.linkedin}`,
-    label: texts.contacts.linkedin,
-  });
+function getSocialMediaArrayByLanguage(lang: LanguageType) {
+  const arr: SocialMediaType[] = [];
+
+  const socialMediaData = lang === "pt" ? textsPt : textsEn;
+
+  if (socialMediaData.contacts.whatsapp)
+    arr.push({
+      icon: WhatsappIcon,
+      url: `https://wa.me/${socialMediaData.contacts.whatsapp}`,
+      label: socialMediaData.contacts.whatsapp_label,
+    });
+  if (socialMediaData.contacts.email)
+    arr.push({
+      icon: EmailIcon,
+      url: `mailto:${socialMediaData.contacts.email}`,
+      label: socialMediaData.contacts.email,
+    });
+  if (socialMediaData.contacts.github)
+    arr.push({
+      icon: GithubIcon,
+      url: `https://github.com/${socialMediaData.contacts.github}`,
+      label: socialMediaData.contacts.github,
+    });
+  if (socialMediaData.contacts.linkedin)
+    arr.push({
+      icon: LinkedinIcon,
+      url: `https://linkedin.com/in/${socialMediaData.contacts.linkedin}`,
+      label: socialMediaData.contacts.linkedin,
+    });
+
+  return arr;
+}
+
+export function getSocialMediaArray() {
+  const lang = i18next.language;
+  return getSocialMediaArrayByLanguage(lang as LanguageType);
+}

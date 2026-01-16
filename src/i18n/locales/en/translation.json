@@ -1,0 +1,25 @@
+{
+  "header": {
+    "home": "Home",
+    "about_me": "About me",
+    "projects": "Projects"
+  },
+  "banner": {
+    "pretitle": "Hey! My name is...",
+    "prefixsubtitle": "",
+    "sufixsubtitle": "Developer",
+    "download_curriculum": "Download curriculum (PDF)",
+    "contact": "Contact"
+  },
+  "about_me": {
+    "professional_experience": "Professional Experience",
+    "tech_stacks": "Stacks"
+  },
+  "projects": {
+    "description": "Here is a project section",
+    "search_placeholder": "Search by name, technologies, company..."
+  },
+  "footer": {
+    "see_this_portfolio_repository": "See this portfolio's repository"
+  }
+}

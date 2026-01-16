@@ -46,3 +46,5 @@ export type LinkType = {
   label: string;
   url: string;
 }
+
+export type LanguageType = "pt" | "en";

@@ -1,0 +1,25 @@
+{
+  "header": {
+    "home": "Início",
+    "about_me": "Sobre mim",
+    "projects": "Projetos"
+  },
+  "banner": {
+    "pretitle": "Olá! Me chamo...",
+    "prefixsubtitle": "Desenvolvedor",
+    "sufixsubtitle": "",
+    "download_curriculum": "Baixar currículo (PDF)",
+    "contact": "Contato"
+  },
+  "about_me": {
+    "professional_experience": "Experiência Profissional",
+    "tech_stacks": "Tecnologias"
+  },
+  "projects": {
+    "description": "Essa é uma seção de projetos",
+    "search_placeholder": "Pesquisar por nome, tecnologia, empresa..."
+  },
+  "footer": {
+    "see_this_portfolio_repository": "Veja o repositório deste portfólio"
+  }
+}
