@@ -52,7 +52,17 @@
 }
 
 .tab_container {
+  width: 90%;
+  max-width: 900px;
+}
+
+.tab_container, .tab_container_item {
   margin-inline: 18px;
+}
+
+.tab_container_item {
+  padding-block: 18px;
+  width: 100%;
 }
 
 @media (max-width: $mobile-breakpoint) {

@@ -9,6 +9,7 @@ interface Props {
 }
 
 export default function Timeline({ items }: Props) {
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const firstDotRef = useRef<HTMLDivElement | null>(null);
   const lastDotRef = useRef<HTMLDivElement | null>(null);
 
@@ -18,6 +19,8 @@ export default function Timeline({ items }: Props) {
   const [lastDot, setLastDot] = useState<
     { top: number; left: number } | undefined
   >(undefined);
+
+  const [expandedIndex, setExpandedIndex] = useState(NaN);
 
   useEffect(() => {
     function updatePositions() {
@@ -39,6 +42,13 @@ export default function Timeline({ items }: Props) {
 
     updatePositions();
 
+    const ro = new ResizeObserver(() => {
+      // joga pro próximo frame pra pegar o layout já “assentado”
+      requestAnimationFrame(updatePositions);
+    });
+
+    if (containerRef.current) ro.observe(containerRef.current);
+
     window.addEventListener("resize", updatePositions);
     window.addEventListener("scroll", updatePositions, true);
 
@@ -49,7 +59,7 @@ export default function Timeline({ items }: Props) {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div ref={containerRef} className={styles.container}>
       <div
         className={styles.line}
         style={{
@@ -66,6 +76,12 @@ export default function Timeline({ items }: Props) {
           <TimelineItem
             content={item}
             ref={isFirst ? firstDotRef : isLast ? lastDotRef : undefined}
+            expanded={index === expandedIndex}
+            onExpandRequest={() =>
+              index === expandedIndex
+                ? setExpandedIndex(NaN)
+                : setExpandedIndex(index)
+            }
           />
         );
       })}

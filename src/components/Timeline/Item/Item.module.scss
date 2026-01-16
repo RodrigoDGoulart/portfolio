@@ -4,7 +4,7 @@
   height: 10px;
   border-radius: 10px;
   background-color: $cyan;
-  margin-top: 5px;
+  margin-top: 12px;
 }
 
 .container {
@@ -15,7 +15,33 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
+}
+
+.header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  button {
+    border: none;
+    background: none;
+
+    svg {
+      color: $cyan;
+      width: 15px;
+      height: auto;
+
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      svg {
+        cursor: pointer;
+        color: $pink;
+      }
+    }
+  }
 }
 
 .titles {
@@ -36,4 +62,25 @@
 
 .desc {
   text-align: left;
+  margin-block: 6px;
+  line-height: 20px;
+}
+
+.expand {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: height 240ms ease, opacity 200ms ease, transform 240ms ease;
+  will-change: height, opacity, transform;
+}
+
+.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Conteúdo interno (pra dar espaçamento sem “quebrar” a altura do wrapper) */
+.expandInner {
+  padding-top: 10px; // ajusta se quiser
 }

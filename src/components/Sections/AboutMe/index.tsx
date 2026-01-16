@@ -25,7 +25,7 @@ export default function AboutMe() {
             {
               title: "Experiência Profissional",
               content: (
-                <div className={styles.tab_container}>
+                <div className={styles.tab_container_item}>
                   <Timeline
                     items={texts.jobs.map((job) => ({
                       title: job.title,
