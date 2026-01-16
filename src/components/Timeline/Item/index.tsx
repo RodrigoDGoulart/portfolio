@@ -56,7 +56,7 @@ const TimelineItem = forwardRef<HTMLDivElement, Props>(
             style={{ height }}
             aria-hidden={!props.expanded}
           >
-            <div ref={bodyInnerRef} className={styles.expandInner}>
+            <div ref={bodyInnerRef}>
               <BadgeContainer badges={content.badges} />
               <div>
                 {content.desc.split("\n").map(
