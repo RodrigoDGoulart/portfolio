@@ -1,7 +1,7 @@
 import { LanguageType, SocialMediaType } from "../@types";
 
-import textsPt from "../assets/infos.pt.json";
-import textsEn from "../assets/infos.en.json";
+import textsPt from "../assets/portfolioData/infos.pt.json";
+import textsEn from "../assets/portfolioData/infos.en.json";
 
 import WhatsappIcon from "../assets/icons/whatsapp.svg?react";
 import EmailIcon from "../assets/icons/email.svg?react";
