@@ -11,6 +11,10 @@
   
   &:focus-within {
      border-color: $cyan;
+
+     .icon {
+      color: $cyan;
+     }
   }
 }
 
@@ -29,4 +33,5 @@
 .icon {
   color: $dark-gray-700;
   width: 16px;
+  transition: color 0.2s ease;
 }

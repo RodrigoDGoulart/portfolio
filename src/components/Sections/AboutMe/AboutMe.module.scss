@@ -3,7 +3,13 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  padding-block: 36px;
+  padding: 48px 0px;
+  margin: 0 auto;
+  border: 1px solid $black-30;
+  border-radius: 26px;
+  background-color: $black-15;
+  backdrop-filter: blur(98px);
+  -webkit-backdrop-filter: blur(98px);
 }
 
 .content_container {
@@ -64,13 +70,21 @@
   max-width: 900px;
 }
 
-.tab_container, .tab_container_item {
+.tab_container,
+.tab_container_item {
   margin-inline: 18px;
 }
 
 .tab_container_item {
   padding-block: 18px;
   width: 100%;
+}
+
+@media (max-width: calc($mobile-breakpoint + 300px)) {
+  .container {
+    border-radius: 0;
+    border-inline: 0;
+  }
 }
 
 @media (max-width: $mobile-breakpoint) {
