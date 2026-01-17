@@ -12,7 +12,7 @@ import { getPortfolioData } from "../../../constants/portfolioData.constants";
 
 export default function AboutMe() {
   const { t } = useTranslation();
-  
+
   const texts = getPortfolioData();
 
   return (
@@ -22,7 +22,7 @@ export default function AboutMe() {
       </Title>
       <div className={styles.content_container}>
         <img src={ProfileImg} alt="" />
-        <p>{texts.about_me}</p>
+        <p dangerouslySetInnerHTML={{ __html: texts.about_me }} />
       </div>
       <div className={styles.tab_container}>
         <TabContainer
