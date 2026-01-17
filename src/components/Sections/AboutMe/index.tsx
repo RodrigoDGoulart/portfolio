@@ -46,8 +46,8 @@ export default function AboutMe() {
               title: t("about_me.tech_stacks"),
               content: (
                 <div className={styles.stacks_container}>
-                  {texts.stacks.map((stack) => (
-                    <div className={styles.stack_container}>
+                  {texts.stacks.map((stack, index) => (
+                    <div className={styles.stack_container} key={index}>
                       <Title hightlight size="h2">
                         {stack.name}
                       </Title>

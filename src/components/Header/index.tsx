@@ -60,8 +60,8 @@ export default function Header() {
       <Logo className={styles.logo} />
       <nav>
         <ul>
-          {LINKS.map((link) => (
-            <li>
+          {LINKS.map((link, index) => (
+            <li key={index}>
               <Button
                 styleType="text-only"
                 onClick={() => handlePageClick(link.url)}

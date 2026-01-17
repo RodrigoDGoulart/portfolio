@@ -38,9 +38,10 @@ export default function ModalMenu(props: Props) {
       >
         <HamburguerIcon onClick={handleClose} className={styles.hamb_icon} />
         <ul>
-          {props.pageLinks.map((link) => (
+          {props.pageLinks.map((link, index) => (
             <li key={link.url}>
               <Button
+                key={index}
                 styleType="text-only"
                 onClick={() => props.onPageClick(link.url)}
               >

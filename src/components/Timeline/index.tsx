@@ -74,6 +74,7 @@ export default function Timeline({ items }: Props) {
 
         return (
           <TimelineItem
+            key={index}
             content={item}
             ref={isFirst ? firstDotRef : isLast ? lastDotRef : undefined}
             expanded={index === expandedIndex}
