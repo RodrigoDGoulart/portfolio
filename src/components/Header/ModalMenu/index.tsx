@@ -9,6 +9,8 @@ import Button from "../../Button";
 import MadeWithLove from "../../MadeWithLove";
 import { useState } from "react";
 import classNames from "classnames";
+import { getPortfolioData } from "../../../constants/portfolioData.constants";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   socialMedia: SocialMediaType[];
@@ -19,6 +21,10 @@ interface Props {
 }
 
 export default function ModalMenu(props: Props) {
+  const { t } = useTranslation();
+
+  const texts = getPortfolioData();
+
   const [isClosing, setIsClosing] = useState(false);
 
   function handleClose() {
@@ -63,7 +69,12 @@ export default function ModalMenu(props: Props) {
           ))}
         </div>
         <div className={styles.spacing}></div>
-        <Button styleType="link">Veja o repositório deste portfólio</Button>
+        <Button
+          onClick={() => props.onSocialMediaClick(texts.portfolio_repo_url)}
+          styleType="link"
+        >
+          {t("footer.see_this_portfolio_repository")}
+        </Button>
         <MadeWithLove wrapRow />
       </div>
     </div>,

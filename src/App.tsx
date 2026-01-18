@@ -4,6 +4,7 @@ import AboutMe from "./components/Sections/AboutMe";
 import Projects from "./components/Sections/Projects";
 
 import styles from "./App.module.scss";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <AboutMe />
         <Projects />
       </main>
+      <Footer />
     </>
   );
 }
