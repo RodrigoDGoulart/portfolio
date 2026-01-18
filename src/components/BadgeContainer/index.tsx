@@ -24,7 +24,7 @@ export default function BadgeContainer({
       ))}
       {maxLength && badges?.length > maxLength && (
         <div className={styles.extra_badge}>
-          +{badges?.length - maxLength} stacks
+          +{badges?.length - maxLength}
         </div>
       )}
     </div>

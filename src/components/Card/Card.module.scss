@@ -123,8 +123,12 @@
 
 /* media queries ajustados */
 @media (max-width: calc($mobile-breakpoint + 400px)) {
-  .badges {
-    display: none;
+  .compactGrid {
+    .content {
+      .badges {
+        display: none;
+      }
+    }
   }
 }
 
@@ -137,9 +141,5 @@
   .thumbnail {
     width: 100%;
     height: auto;
-  }
-
-  .badges {
-    display: none;
   }
 }

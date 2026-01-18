@@ -21,7 +21,6 @@ interface Props {
 }
 
 export default function Card({ content, ...props }: Props) {
-  const [badgeMax, setBadgeMax] = useState(getBadgeMax());
 
   const [renderExpanded, setRenderExpanded] = useState<boolean>(
     !!props.expaned
@@ -30,13 +29,6 @@ export default function Card({ content, ...props }: Props) {
 
   const [height, setHeight] = useState<number>(0);
   const measureRef = useRef<HTMLDivElement | null>(null);
-
-  function getBadgeMax() {
-    const width = window.innerWidth;
-    if (width < 690) return 3;
-    else if (width < 870) return 4;
-    return 5;
-  }
 
   function handleLinkClick(url: string) {
     window.open(url, "_blank");
@@ -92,7 +84,6 @@ export default function Card({ content, ...props }: Props) {
     content.desc,
     content.details,
     content.badges?.length,
-    badgeMax,
   ]);
 
   useEffect(() => {
@@ -103,12 +94,6 @@ export default function Card({ content, ...props }: Props) {
     ro.observe(el);
     return () => ro.disconnect();
   }, [renderExpanded]);
-
-  useEffect(() => {
-    const onResize = () => setBadgeMax(getBadgeMax());
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, []);
 
   function CompactContent() {
     return (
@@ -132,7 +117,7 @@ export default function Card({ content, ...props }: Props) {
           </div>
 
           <div className={styles.badges}>
-            <BadgeContainer badges={content.badges} maxLength={badgeMax} />
+            <BadgeContainer badges={content.badges} maxLength={4} />
           </div>
 
           <Text className={styles.desc}>{content.desc}</Text>
@@ -171,7 +156,7 @@ export default function Card({ content, ...props }: Props) {
           {Links}
 
           <div className={styles.badges}>
-            <BadgeContainer badges={content.badges} maxLength={badgeMax} />
+            <BadgeContainer badges={content.badges} />
           </div>
 
           <Text className={styles.descExpanded}>{content.desc}</Text>
