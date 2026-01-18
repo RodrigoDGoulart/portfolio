@@ -29,6 +29,10 @@
 .compactGrid {
   display: flex;
   height: 186px;
+
+  .content {
+    flex: 1;
+  }
 }
 
 .thumbnail {
