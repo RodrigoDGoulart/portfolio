@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 8px
+  gap: 8px;
 }
 
 .tabs {
@@ -10,4 +10,22 @@
   .btn {
     flex: 1;
   }
+}
+
+.panel {
+  overflow: hidden;
+  transition: height 240ms ease;
+  will-change: height;
+}
+
+.inner {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms ease, transform 200ms ease;
+  will-change: opacity, transform;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateY(-4px);
 }
