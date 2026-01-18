@@ -33,6 +33,12 @@
     gap: 18px;
     width: 80%;
   }
+
+  .no_project_found {
+    text-align: center;
+    opacity: 0.5;
+    padding-block: 18px;
+  }
 }
 
 @media (max-width: calc($mobile-breakpoint + 300px)) {

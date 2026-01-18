@@ -94,18 +94,22 @@ export default function Projects() {
       />
 
       <div className={styles.projects_container}>
-        {filteredItems.map((project, index) => (
-          <Card
-            key={index}
-            content={project}
-            expaned={index === expandedIndex}
-            onExpandClick={() =>
-              index !== expandedIndex
-                ? setExpandedIndex(index)
-                : setExpandedIndex(NaN)
-            }
-          />
-        ))}
+        {filteredItems.length !== 0 ? (
+          filteredItems.map((project, index) => (
+            <Card
+              key={index}
+              content={project}
+              expaned={index === expandedIndex}
+              onExpandClick={() =>
+                index !== expandedIndex
+                  ? setExpandedIndex(index)
+                  : setExpandedIndex(NaN)
+              }
+            />
+          ))
+        ) : (
+          <div className={styles.no_project_found}>{t("projects.no_project_found")}</div>
+        )}
       </div>
     </div>
   );

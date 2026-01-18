@@ -17,7 +17,8 @@
   },
   "projects": {
     "description": "Here is a project section",
-    "search_placeholder": "Search by name, technologies, company..."
+    "search_placeholder": "Search by name, technologies, company...",
+    "no_project_found": "No project have been found."
   },
   "footer": {
     "see_this_portfolio_repository": "See this portfolio's repository"
