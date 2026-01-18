@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  align-items: center;
 }
 
 .tabs {
   display: flex;
+  width: 100%;
 
   .btn {
     flex: 1;
@@ -13,7 +15,7 @@
 }
 
 .panel {
-  overflow: hidden;
+  width: 100%;
   transition: height 240ms ease;
   will-change: height;
 }
