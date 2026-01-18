@@ -10,11 +10,20 @@
   background-color: $black-40;
   backdrop-filter: blur(98px);
   -webkit-backdrop-filter: blur(98px);
-  box-sizing: border-box;
+  box-sizing: content-box;
   width: 100%;
 
   .desc {
+    box-sizing: border-box;
     text-align: center;
+    max-width: 900px;
+    padding-inline: 24px;
+    line-height: 24px;
+
+    b {
+      font-weight: bold;
+      color: $cyan;
+    }
   }
 
   .search_input {

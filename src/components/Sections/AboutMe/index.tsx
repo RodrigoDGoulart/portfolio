@@ -22,7 +22,9 @@ export default function AboutMe() {
       </Title>
       <div className={styles.content_container}>
         <img src={ProfileImg} alt="" />
-        <p dangerouslySetInnerHTML={{ __html: texts.about_me }} />
+        {texts.about_me.split("\n").map((text) => (
+          <p dangerouslySetInnerHTML={{ __html: text }} />
+        ))}
       </div>
       <div className={styles.tab_container}>
         <TabContainer

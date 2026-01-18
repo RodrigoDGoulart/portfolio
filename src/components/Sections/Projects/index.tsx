@@ -83,7 +83,10 @@ export default function Projects() {
         {t("header.projects")}
       </Title>
 
-      <div className={styles.desc}>{t("projects.description")}</div>
+      <div
+        className={styles.desc}
+        dangerouslySetInnerHTML={{ __html: t("projects.description") }}
+      />
 
       <Input
         icon={searchIcon}
@@ -108,7 +111,9 @@ export default function Projects() {
             />
           ))
         ) : (
-          <div className={styles.no_project_found}>{t("projects.no_project_found")}</div>
+          <div className={styles.no_project_found}>
+            {t("projects.no_project_found")}
+          </div>
         )}
       </div>
     </div>
