@@ -19,7 +19,9 @@
   }
 
   to {
-    background-color: $black-70;
+    background-color: $black-50;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 }
 
@@ -34,7 +36,9 @@
 }
 
 .menu {
-  background-color: black;
+  background-color: $black-60;
+  backdrop-filter: blur(200px);
+  -webkit-backdrop-filter: blur(200px);
   height: calc(100% - 32px);
   width: 160px;
   padding: 20px 26px;

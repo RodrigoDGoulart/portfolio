@@ -5,9 +5,9 @@
   gap: 24px;
   padding: 48px 0px;
   margin: 0 auto;
-  border: 1px solid $black-30;
+  border: 1px solid $black-60;
   border-radius: 26px;
-  background-color: $black-15;
+  background-color: $black-40;
   backdrop-filter: blur(98px);
   -webkit-backdrop-filter: blur(98px);
 }
@@ -31,14 +31,14 @@
     line-height: 24px;
 
     b {
-      color: $pink;
+      color: $cyan;
     }
   }
 }
 
 .title {
-  color: $pink;
-  text-shadow: 0 0 6px $pink;
+  color: $cyan;
+  text-shadow: 0 0 8px $cyan;
   font-size: 30px;
 }
 

@@ -5,9 +5,9 @@
   gap: 24px;
   padding-block: 48px;
   margin: 0 auto;
-  border: 1px solid $black-30;
+  border: 1px solid $black-60;
   border-radius: 26px;
-  background-color: $black-15;
+  background-color: $black-40;
   backdrop-filter: blur(98px);
   -webkit-backdrop-filter: blur(98px);
   box-sizing: border-box;
@@ -22,8 +22,8 @@
   }
 
   .title {
-    color: $pink;
-    text-shadow: 0 0 6px $pink;
+    color: $cyan;
+    text-shadow: 0 0 6px $cyan;
     font-size: 30px;
   }
 
