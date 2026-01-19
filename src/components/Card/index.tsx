@@ -21,7 +21,6 @@ interface Props {
 }
 
 export default function Card({ content, ...props }: Props) {
-
   const [renderExpanded, setRenderExpanded] = useState<boolean>(
     !!props.expaned
   );
@@ -120,7 +119,9 @@ export default function Card({ content, ...props }: Props) {
             <BadgeContainer badges={content.badges} maxLength={4} />
           </div>
 
-          <Text className={styles.desc}>{content.desc}</Text>
+          <Text className={styles.desc}>
+            <span dangerouslySetInnerHTML={{ __html: content.desc }} />
+          </Text>
 
           {Links}
 
@@ -159,8 +160,14 @@ export default function Card({ content, ...props }: Props) {
             <BadgeContainer badges={content.badges} />
           </div>
 
-          <Text className={styles.descExpanded}>{content.desc}</Text>
-          <Text className={styles.details}>{content.details}</Text>
+          <Text className={styles.descExpanded}>
+            <span dangerouslySetInnerHTML={{ __html: content.desc }} />
+          </Text>
+          {content.details.split("\n").map((text, key) => (
+            <Text className={styles.details} key={key}>
+              <span dangerouslySetInnerHTML={{ __html: text }} />
+            </Text>
+          ))}
 
           <div className={styles.expandRow}>
             <button

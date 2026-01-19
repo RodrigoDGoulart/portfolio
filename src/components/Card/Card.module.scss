@@ -28,7 +28,7 @@
 /* Layout compacto / expandido só organizam conteúdo */
 .compactGrid {
   display: flex;
-  height: 186px;
+  height: 205px;
 
   .content {
     flex: 1;
@@ -66,7 +66,7 @@
   }
 
   .subtitle {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: normal;
   }
 }
@@ -79,24 +79,22 @@
 }
 
 .desc {
-  flex: 1;
-  font-size: 12px;
-  text-align: justify;
-  display: -webkit-box;
   line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-.descExpanded {
-  font-size: 14px;
+.desc, .descExpanded, .details {
+  flex: 1;
+  font-size: 15px;
   text-align: justify;
-}
+  display: -webkit-box;
+  line-height: 21px;
 
-.details {
-  font-size: 14px;
-  text-align: justify;
+  span b {
+    color: $cyan;
+  }
 }
 
 .expandRow {

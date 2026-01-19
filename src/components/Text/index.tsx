@@ -2,7 +2,7 @@ import classNames from "classnames";
 import styles from "./Text.module.scss";
 
 interface Props extends React.HTMLAttributes<HTMLParagraphElement> {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   detach?: boolean;
 }
 
