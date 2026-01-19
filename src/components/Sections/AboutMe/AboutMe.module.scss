@@ -76,14 +76,12 @@
   width: 100%;
 }
 
-@media (max-width: calc($mobile-breakpoint + 300px)) {
+@media (max-width: $mobile-breakpoint) {
   .container {
     border-radius: 0;
     border-inline: 0;
   }
-}
 
-@media (max-width: $mobile-breakpoint) {
   .content_container {
     flex-direction: column;
     display: flex;

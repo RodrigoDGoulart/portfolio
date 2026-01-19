@@ -50,7 +50,7 @@
   }
 }
 
-@media (max-width: calc($mobile-breakpoint + 300px)) {
+@media (max-width: calc($mobile-breakpoint)) {
   .container {
     border-radius: 0;
     border-inline: 0;

@@ -2,7 +2,7 @@
   background-color: $gray;
   border-radius: 8px;
   overflow: hidden;
-  width: 100%;
+  max-width: 760px;
 }
 
 /* anima só a altura, sem mexer na opacidade */
@@ -119,21 +119,15 @@
   height: auto;
 }
 
-/* media queries ajustados */
-@media (max-width: calc($mobile-breakpoint + 400px)) {
+@media (max-width: $mobile-breakpoint) {
   .compactGrid {
+    flex-direction: column;
+    height: auto;
     .content {
       .badges {
         display: none;
       }
     }
-  }
-}
-
-@media (max-width: $mobile-breakpoint) {
-  .compactGrid {
-    flex-direction: column;
-    height: auto;
   }
 
   .thumbnail {
