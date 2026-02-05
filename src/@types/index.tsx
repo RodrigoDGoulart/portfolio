@@ -37,6 +37,7 @@ export type TimelineItem = {
 };
 
 export type SocialMediaType = {
+  name: string;
   icon: IconType;
   url: string;
   label: string;

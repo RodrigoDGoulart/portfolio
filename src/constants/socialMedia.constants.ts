@@ -16,24 +16,28 @@ function getSocialMediaArrayByLanguage(lang: LanguageType) {
 
   if (socialMediaData.contacts.whatsapp)
     arr.push({
+      name: "whatsapp",
       icon: WhatsappIcon,
       url: `https://wa.me/${socialMediaData.contacts.whatsapp}`,
       label: socialMediaData.contacts.whatsapp_label,
     });
   if (socialMediaData.contacts.email)
     arr.push({
+      name: "email",
       icon: EmailIcon,
       url: `mailto:${socialMediaData.contacts.email}`,
       label: socialMediaData.contacts.email,
     });
   if (socialMediaData.contacts.github)
     arr.push({
+      name: "github",
       icon: GithubIcon,
       url: `https://github.com/${socialMediaData.contacts.github}`,
       label: socialMediaData.contacts.github,
     });
   if (socialMediaData.contacts.linkedin)
     arr.push({
+      name: "linkedin",
       icon: LinkedinIcon,
       url: `https://linkedin.com/in/${socialMediaData.contacts.linkedin}`,
       label: socialMediaData.contacts.linkedin,

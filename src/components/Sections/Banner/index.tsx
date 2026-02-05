@@ -12,7 +12,17 @@ import ActionButton from "../../ActionButton";
 import { getSocialMediaArray } from "../../../constants/socialMedia.constants";
 import { useTranslation } from "react-i18next";
 import { getPortfolioData } from "../../../constants/portfolioData.constants";
-import { handleSocialMediaClick, HOLD_MS, INITIAL_TEXT_DELAY_MS, lerpColor, padRight, RANDOM_ORDER, shuffle, STEP_MS } from "./Banner.constants";
+import {
+  getSocialMediaCopiableValue,
+  handleSocialMediaClick,
+  HOLD_MS,
+  INITIAL_TEXT_DELAY_MS,
+  lerpColor,
+  padRight,
+  RANDOM_ORDER,
+  shuffle,
+  STEP_MS,
+} from "./Banner.constants";
 
 export default function Banner() {
   const { t } = useTranslation();
@@ -200,6 +210,7 @@ export default function Banner() {
               icon: item.icon,
               label: item.label,
               onClick: () => handleSocialMediaClick(item),
+              copiableValue: getSocialMediaCopiableValue(item),
             }))}
           />
         </div>
@@ -211,7 +222,7 @@ export default function Banner() {
           styles.banner_img,
           notebookEnter ? styles.banner_img_enter : "",
           isOpened ? "" : styles.banner_margin_top,
-          isOpened ? styles.banner_float_infinite : ""
+          isOpened ? styles.banner_float_infinite : "",
         )}
         draggable={false}
       />

@@ -50,3 +50,15 @@ export function lerpColor(fromHex: string, toHex: string, t: number) {
 export function handleSocialMediaClick(socialMedia: SocialMediaType) {
   window.open(socialMedia.url, "_blank");
 }
+
+export function getSocialMediaCopiableValue(
+  socialMedia: SocialMediaType,
+): string {
+  switch (socialMedia.name) {
+    case "whatsapp":
+    case "email":
+      return socialMedia.label;
+    default:
+      return socialMedia.url;
+  }
+}

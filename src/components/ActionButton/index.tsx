@@ -5,17 +5,25 @@ import { cloneElement } from "react";
 
 import { IconType } from "../../@types";
 
+import CopyIcon from "../../assets/icons/copy.svg?react";
+import { useToastContext } from "../../contexts/ToastContext";
+import { useTranslation } from "react-i18next";
+
 interface Props {
   options: {
     icon: IconType;
     label: string;
     onClick: () => void;
+    copiableValue?: string;
   }[];
   button: React.ReactElement<HTMLButtonElement>;
   dropdownMenuProps?: DropdownMenu.DropdownMenuContentProps;
 }
 
 export default function ActionButton(props: Props) {
+  const { setMessage: setToastMessage } = useToastContext();
+  const {t} = useTranslation();
+
   const content = (mode: "desktop" | "mobile") => {
     const deskProps: DropdownMenu.DropdownMenuContentProps = {
       align: "start",
@@ -36,6 +44,14 @@ export default function ActionButton(props: Props) {
       ...props.dropdownMenuProps,
     };
 
+    function handleCopy(e: React.MouseEvent, value: string) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      navigator.clipboard.writeText(value);
+      setToastMessage(`<b>${value}</b> ${t("coppied_success")}`);
+    }
+
     return (
       <>
         <DropdownMenu.Trigger asChild>
@@ -54,7 +70,15 @@ export default function ActionButton(props: Props) {
                 onSelect={option.onClick}
               >
                 <option.icon className={styles.icon} />
-                <span>{option.label}</span>
+                <span className={styles.label}>{option.label}</span>
+                {option.copiableValue && (
+                  <button
+                    className={styles.copy_icon}
+                    onClick={(e) => handleCopy(e, option.copiableValue as string)}
+                  >
+                    <CopyIcon />
+                  </button>
+                )}
               </DropdownMenu.Item>
             ))}
           </DropdownMenu.Content>

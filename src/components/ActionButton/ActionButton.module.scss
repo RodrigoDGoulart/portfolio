@@ -63,7 +63,7 @@
 .item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
   padding: 10px 12px;
   border-radius: 8px;
   background: transparent;
@@ -81,12 +81,28 @@
   &[data-highlighted] {
     background: rgba(255, 255, 255, 0.08);
   }
+
+  .label {
+    flex: 1;
+  }
 }
 
 .icon {
   width: 18px;
   height: 18px;
   flex: 0 0 auto;
+}
+
+.copy_icon {
+  background: none;
+  border: none;
+  color: $cyan;
+  transition: color 0.5s ease;
+
+  &:hover {
+    cursor: pointer;
+    color: $pink;
+  }
 }
 
 .separator {
