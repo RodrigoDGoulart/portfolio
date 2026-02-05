@@ -28,6 +28,12 @@ import rendererIcon from "@/assets/icons/stacks/renderer.svg?react";
 import figmaIcon from "@/assets/icons/stacks/figma.svg?react";
 import openaiIcon from "@/assets/icons/stacks/openai.svg?react";
 import ollamaIcon from "@/assets/icons/stacks/ollama.svg?react";
+import springIcon from "@/assets/icons/stacks/spring.svg?react"
+import djangoIcon from "@/assets/icons/stacks/django.svg?react"
+import firebaseIcon from "@/assets/icons/stacks/firebase.svg?react"
+import bootstrapIcon from "@/assets/icons/stacks/bootstrap.svg?react"
+import dockerIcon from "@/assets/icons/stacks/docker.svg?react"
+import yoloIcon from "@/assets/icons/stacks/yolo.svg?react"
 
 import { BadgeType } from "../@types";
 
@@ -202,6 +208,60 @@ export const NodeBadge: BadgeType = {
   label: "NodeJs",
 };
 
+export const SpringBadge: BadgeType = {
+  color: {
+    primary: "#00a100ff",
+    secondary: "white",
+  },
+  icon: springIcon,
+  label: "Spring",
+};
+
+export const DjangoBadge: BadgeType = {
+  color: {
+    primary: "#005700ff",
+    secondary: "white",
+  },
+  icon: djangoIcon,
+  label: "Django",
+};
+
+export const FirebaseBadge: BadgeType = {
+  color: {
+    primary: "#ff5100ff",
+    secondary: "white",
+  },
+  icon: firebaseIcon,
+  label: "Firebase",
+};
+
+export const BootstrapBadge: BadgeType = {
+  color: {
+    primary: "#9500ebff",
+    secondary: "white",
+  },
+  icon: bootstrapIcon,
+  label: "Bootstrap",
+};
+
+export const DockerBadge: BadgeType = {
+  color: {
+    primary: "#0081ebff",
+    secondary: "white",
+  },
+  icon: dockerIcon,
+  label: "Docker",
+};
+
+export const YoloBadge: BadgeType = {
+  color: {
+    primary: "#0081ebff",
+    secondary: "white",
+  },
+  icon: yoloIcon,
+  label: "Yolo",
+};
+
 export const FlaskBadge: BadgeType = {
   color: {
     primary: "#1f1f1fff",
@@ -231,7 +291,7 @@ export const PostgreBadge: BadgeType = {
 
 export const MongoDBBadge: BadgeType = {
   color: {
-    primary: "#0aff8dff",
+    primary: "#00d146ff",
     secondary: "white",
   },
   icon: mongodbIcon,
@@ -342,6 +402,12 @@ const BADGES = {
   figma: FigmaBadge,
   "open-ai": OpenAiBadge,
   ollama: OllamaBadge,
+  spring: SpringBadge,
+  django: DjangoBadge,
+  firebase: FirebaseBadge,
+  bootstrap: BootstrapBadge,
+  docker: DockerBadge,
+  yolo: YoloBadge,
 } satisfies Record<string, BadgeType>;
 
 type BadgeName = keyof typeof BADGES;
