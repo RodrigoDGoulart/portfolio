@@ -10,54 +10,9 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import classNames from "classnames";
 import ActionButton from "../../ActionButton";
 import { getSocialMediaArray } from "../../../constants/socialMedia.constants";
-import { SocialMediaType } from "../../../@types";
 import { useTranslation } from "react-i18next";
 import { getPortfolioData } from "../../../constants/portfolioData.constants";
-
-function padRight(str: string, len: number, ch = " ") {
-  if (str.length >= len) return str;
-  return str + ch.repeat(len - str.length);
-}
-
-function shuffle<T>(arr: T[]) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-function hexToRgb(hex: string) {
-  const clean = hex.replace("#", "");
-  const full =
-    clean.length === 3
-      ? clean
-          .split("")
-          .map((c) => c + c)
-          .join("")
-      : clean;
-
-  const n = parseInt(full, 16);
-  return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 };
-}
-
-function lerp(a: number, b: number, t: number) {
-  return Math.round(a + (b - a) * t);
-}
-
-function lerpColor(fromHex: string, toHex: string, t: number) {
-  const a = hexToRgb(fromHex);
-  const b = hexToRgb(toHex);
-  const r = lerp(a.r, b.r, t);
-  const g = lerp(a.g, b.g, t);
-  const b2 = lerp(a.b, b.b, t);
-  return `rgb(${r}, ${g}, ${b2})`;
-}
-
-function handleSocialMediaClick(socialMedia: SocialMediaType) {
-  window.open(socialMedia.url, "_blank");
-}
+import { handleSocialMediaClick, HOLD_MS, INITIAL_TEXT_DELAY_MS, lerpColor, padRight, RANDOM_ORDER, shuffle, STEP_MS } from "./Banner.constants";
 
 export default function Banner() {
   const { t } = useTranslation();
@@ -84,12 +39,6 @@ export default function Banner() {
     texts.subtitles[wordIndex % texts.subtitles.length].color;
   const nextColor =
     texts.subtitles[nextWordIndex % texts.subtitles.length].color;
-
-  // configurações do efeito
-  const STEP_MS = 70;
-  const HOLD_MS = 900;
-  const RANDOM_ORDER = true;
-  const INITIAL_TEXT_DELAY_MS = 3000;
 
   const positions = useMemo(() => {
     const maxLen = Math.max(currentWord.length, nextWord.length);
@@ -200,7 +149,7 @@ export default function Banner() {
     // 3) depois de um tempinho, troca a imagem (closed -> open)
     const t = window.setTimeout(() => {
       setIsOpened(true);
-    }, 450); // ajusta (ex: 300-700ms)
+    }, 450);
 
     return () => {
       cancelAnimationFrame(raf);
