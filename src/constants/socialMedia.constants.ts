@@ -39,7 +39,7 @@ function getSocialMediaArrayByLanguage(lang: LanguageType) {
     arr.push({
       name: "linkedin",
       icon: LinkedinIcon,
-      url: `https://linkedin.com/in/${socialMediaData.contacts.linkedin}`,
+      url: `https://linkedin.com/in/${socialMediaData.contacts.linkedin}/?locale=${lang === "pt" ? "pt-BR" : "en-US"}`,
       label: socialMediaData.contacts.linkedin,
     });
 
