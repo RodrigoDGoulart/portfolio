@@ -10,13 +10,17 @@ import { ToastContextProvider } from "./contexts/ToastContext";
 function App() {
   return (
     <ToastContextProvider>
-      <Header />
-      <Banner />
-      <main className={styles.main}>
-        <AboutMe />
-        <Projects />
-      </main>
-      <Footer />
+      <div id="app-scroll">
+        <div className="scroll-inner">
+          <Header />
+          <Banner />
+          <main className={styles.main}>
+            <AboutMe />
+            <Projects />
+          </main>
+          <Footer />
+        </div>
+      </div>
     </ToastContextProvider>
   );
 }

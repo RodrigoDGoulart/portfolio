@@ -129,14 +129,9 @@ function loop() {
 }
 
 function getTargetHeight() {
-  const root = document.getElementById("root");
-  const portal = document.getElementById("portal-root");
-
-  const rootH = root ? root.scrollHeight : 0;
-  const portalH = portal ? portal.scrollHeight : 0;
-
-  // garante pelo menos a altura da viewport
-  return Math.max(rootH, portalH, window.innerHeight);
+  const scroller = document.getElementById("app-scroll");
+  if (!scroller) return window.innerHeight; // fallback até o React montar
+  return Math.max(scroller.scrollHeight, window.innerHeight);
 }
 
 function resizeCanvas() {
@@ -212,7 +207,18 @@ window.addEventListener("load", resizeCanvas);
 window.addEventListener("resize", resizeCanvasThrottled);
 
 const observer = new ResizeObserver(resizeCanvasThrottled);
-observer.observe(document.body);
+
+function attachObserverWhenReady() {
+  const scroller = document.getElementById("app-scroll");
+  if (!scroller) {
+    requestAnimationFrame(attachObserverWhenReady);
+    return;
+  }
+  observer.observe(scroller);
+  resizeCanvas(); // recalcula com a altura real
+}
+
+attachObserverWhenReady();
 
 resizeCanvas();
 loop();

@@ -2,91 +2,189 @@
 /* v1.0 | 20080212 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-html {
-	scroll-behavior: smooth;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
 body {
-	line-height: 1;
-	font-family: 'Roboto', sans-serif;
-	background-color: $dark-gray-850;
-	color: $white;
+  line-height: 1;
+  font-family: 'Roboto', sans-serif;
+  background-color: $dark-gray-850;
+  color: $white;
+  overflow: hidden;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 
 /* remember to define focus styles! */
 :focus {
-	outline: 0;
+  outline: 0;
 }
 
 /* remember to highlight inserts somehow! */
 ins {
-	text-decoration: none;
+  text-decoration: none;
 }
+
 del {
-	text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 /* tables still need 'cellspacing="0"' in the markup */
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 canvas {
-  position: absolute;
-	background-color: #00025e;
+  position: fixed;
+  inset: 0;
+  background-color: #00025e;
   top: 0;
-  width: 100%;
-  z-index: -1;
-
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
   filter: blur(70px);
   opacity: 0.4;
+}
 
-  /* 🔥 Fade vertical de opacidade */
-  // -webkit-mask-image: linear-gradient(
-  //   to bottom,
-  //   rgba(0, 0, 0, 1) 0%,
-  //   rgba(0, 0, 0, 0.8) 60%,
-  //   rgba(0, 0, 0, 0) 100%
-  // );
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  // background: rgba(10, 12, 18, 0.86);
+  z-index: 1;
+  pointer-events: none;
+}
 
-  // mask-image: linear-gradient(
-  //   to bottom,
-  //   rgba(0, 0, 0, 1) 0%,
-  //   rgba(0, 0, 0, 0.8) 40%,
-  //   rgba(0, 0, 0, 0) 100%
-  // );
+#app-scroll {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  position: relative;
+  z-index: 2;
+
+  background: transparent;
+  scroll-behavior: smooth;
+}
+
+#app-scroll::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* track transparente (agora vai mostrar o canvas/overlay atrás) */
+#app-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* thumb */
+#app-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+}
+
+#app-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+/* Firefox (opcional) */
+#app-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.4) transparent;
 }
 
 #about,
 #projects {
   scroll-margin-top: 80px;
+}
+
+#root {
+  height: 100%;
 }

@@ -168,7 +168,7 @@ export default function Banner() {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="home">
       <div className={styles.content}>
         <div className={styles.titles_row}>
           <Title size="h1">{t("banner.pretitle")}</Title>
