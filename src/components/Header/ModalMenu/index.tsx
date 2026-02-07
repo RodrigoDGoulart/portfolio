@@ -76,6 +76,10 @@ export default function ModalMenu(props: Props) {
           {t("footer.see_this_portfolio_repository")}
         </Button>
         <MadeWithLove wrapRow />
+        <div className={styles.license_container}>
+          <span className={styles.license_txt}>© 2026 Rodrigo Goulart</span>
+          <span className={styles.license_txt}>MIT Licensed.</span>
+        </div>
       </div>
     </div>,
     document.getElementById("portal-root")!

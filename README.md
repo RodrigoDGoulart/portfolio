@@ -43,3 +43,7 @@ More specific information (name, projects, professional experience, etc.) is def
 
 - Portfolio information (Brazilian Portuguese): [src/assets/portfolioData/infos.pt.json](src/assets/portfolioData/infos.pt.json)
 - Portfolio information (English): [src/assets/portfolioData/infos.en.json](src/assets/portfolioData/infos.en.json)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

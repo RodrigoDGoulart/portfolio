@@ -34,7 +34,6 @@ export default function Footer() {
           </button>
         ))}
       </div>
-      <MadeWithLove />
       <Button
         styleType="link"
         icon={OpenLinkIcon}
@@ -42,6 +41,8 @@ export default function Footer() {
       >
         {t("footer.see_this_portfolio_repository")}
       </Button>
+      <MadeWithLove />
+      <div className={styles.license_txt}>© 2026 Rodrigo Goulart — MIT Licensed.</div>
     </footer>
   );
 }
