@@ -1,54 +1,43 @@
-# React + TypeScript + Vite
+# Rodrigo Goulart Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code of my personal portfolio, created to present my background, education, professional experience, and projects I developed or actively participated in. It allows content changes without necessarily modifying the code itself—only by editing JSON files and also provides support for both English and Portuguese.
 
-Currently, two official plugins are available:
+## Running the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Make sure your environment is properly set up with Node.js installed (the project was developed using Node.js version `20.19.0` and npm version `10.8.2`).
 
-## Expanding the ESLint configuration
+2. Download the repository by ZIP file or Git.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/RodrigoDGoulart/portfolio.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Enter the project folder and install the required dependencies.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+cd portfolio
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+npm install
 ```
+
+4. After installing the dependencies, simply run the project. By default, it runs on port 5173.
+
+```bash
+npm run dev
+```
+
+## Configuration
+
+1. Adjusting translations
+
+The project uses i18n. If you need to add new translated texts, simply edit the JSON files for each language.
+
+- Portuguese (pt-BR): [src/i18n/locales/pt/translation.json](src/i18n/locales/pt/translation.json)
+- English: [src/i18n/locales/en/translation.json](src/i18n/locales/en/translation.json)
+
+2. Adjusting portfolio information
+
+More specific information (name, projects, professional experience, etc.) is defined in the following JSON files:
+
+- Portfolio information (Brazilian Portuguese): [src/assets/portfolioData/infos.pt.json](src/assets/portfolioData/infos.pt.json)
+- Portfolio information (English): [src/assets/portfolioData/infos.en.json](src/assets/portfolioData/infos.en.json)
