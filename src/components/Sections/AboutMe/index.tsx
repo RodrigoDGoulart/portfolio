@@ -8,12 +8,11 @@ import BadgeContainer from "../../BadgeContainer";
 import { getBadgeData } from "../../../constants/badges.constants";
 import TabContainer from "../../TabContainer";
 import { useTranslation } from "react-i18next";
-import { getPortfolioData } from "../../../constants/portfolioData.constants";
+import { usePortfolioData } from "../../../contexts/PortfolioDataContext";
 
 export default function AboutMe() {
   const { t } = useTranslation();
-
-  const texts = getPortfolioData();
+  const { texts } = usePortfolioData();
 
   return (
     <div id="about" className={styles.container}>
@@ -55,7 +54,7 @@ export default function AboutMe() {
                       </Title>
                       <BadgeContainer
                         badges={stack.badges.map((badge) =>
-                          getBadgeData(badge)
+                          getBadgeData(badge),
                         )}
                         alignCenter
                       />

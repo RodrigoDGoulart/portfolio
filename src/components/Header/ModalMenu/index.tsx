@@ -9,8 +9,8 @@ import Button from "../../Button";
 import MadeWithLove from "../../MadeWithLove";
 import { useState } from "react";
 import classNames from "classnames";
-import { getPortfolioData } from "../../../constants/portfolioData.constants";
 import { useTranslation } from "react-i18next";
+import { usePortfolioData } from "../../../contexts/PortfolioDataContext";
 
 interface Props {
   socialMedia: SocialMediaType[];
@@ -22,8 +22,7 @@ interface Props {
 
 export default function ModalMenu(props: Props) {
   const { t } = useTranslation();
-
-  const texts = getPortfolioData();
+  const { texts } = usePortfolioData();
 
   const [isClosing, setIsClosing] = useState(false);
 
@@ -82,6 +81,6 @@ export default function ModalMenu(props: Props) {
         </div>
       </div>
     </div>,
-    document.getElementById("portal-root")!
+    document.getElementById("portal-root")!,
   );
 }

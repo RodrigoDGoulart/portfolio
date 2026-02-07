@@ -9,9 +9,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import classNames from "classnames";
 import ActionButton from "../../ActionButton";
-import { getSocialMediaArray } from "../../../constants/socialMedia.constants";
 import { useTranslation } from "react-i18next";
-import { getPortfolioData } from "../../../constants/portfolioData.constants";
 import {
   getSocialMediaCopiableValue,
   handleSocialMediaClick,
@@ -23,12 +21,11 @@ import {
   shuffle,
   STEP_MS,
 } from "./Banner.constants";
+import { usePortfolioData } from "../../../contexts/PortfolioDataContext";
 
 export default function Banner() {
   const { t } = useTranslation();
-  const texts = getPortfolioData();
-
-  const SOCIAL_MEDIA = getSocialMediaArray();
+  const { texts, socialMedias: SOCIAL_MEDIA } = usePortfolioData();
 
   const [wordIndex, setWordIndex] = useState(0);
   const [displayText, setDisplayText] = useState(texts.subtitles[0].name);

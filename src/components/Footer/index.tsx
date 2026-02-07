@@ -5,17 +5,13 @@ import Logo from "../../assets/logo.svg?react";
 import OpenLinkIcon from "../../assets/icons/openlink.svg?react";
 
 import { useTranslation } from "react-i18next";
-import { getSocialMediaArray } from "../../constants/socialMedia.constants";
 import MadeWithLove from "../MadeWithLove";
 import Button from "../Button";
-import { getPortfolioData } from "../../constants/portfolioData.constants";
+import { usePortfolioData } from "../../contexts/PortfolioDataContext";
 
 export default function Footer() {
   const { t } = useTranslation();
-
-  const texts = getPortfolioData();
-
-  const SOCIAL_MEDIA = getSocialMediaArray();
+  const { texts, socialMedias: SOCIAL_MEDIA } = usePortfolioData();
 
   function handleClick(url: string) {
     window.open(url, "_blank");

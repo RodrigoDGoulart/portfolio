@@ -1,7 +1,6 @@
 import styles from "./Header.module.scss";
 
 import Logo from "../../assets/logo.svg?react";
-import { getSocialMediaArray } from "../../constants/socialMedia.constants";
 
 import HamburguerIcon from "../../assets/icons/hamburguer.svg?react";
 
@@ -13,13 +12,13 @@ import ModalMenu from "./ModalMenu";
 import { useState } from "react";
 import LanguageSelect from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
+import { usePortfolioData } from "../../contexts/PortfolioDataContext";
 
 export default function Header() {
   const { t } = useTranslation();
+  const { socialMedias: SOCIAL_MEDIA } = usePortfolioData();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const SOCIAL_MEDIA = getSocialMediaArray();
 
   const LINKS: LinkType[] = [
     { label: t("header.home"), url: "#home" },

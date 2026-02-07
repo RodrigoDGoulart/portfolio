@@ -13,7 +13,7 @@ import Card from "../../Card";
 import { getBadgeData } from "../../../constants/badges.constants";
 import { BadgeType, Project as ProjectType } from "../../../@types";
 import { useTranslation } from "react-i18next";
-import { getPortfolioData } from "../../../constants/portfolioData.constants";
+import { usePortfolioData } from "../../../contexts/PortfolioDataContext";
 
 function normalize(str: string) {
   return str
@@ -25,7 +25,7 @@ function normalize(str: string) {
 
 export default function Projects() {
   const { t } = useTranslation();
-  const texts = getPortfolioData();
+  const { texts } = usePortfolioData();
 
   const [search, setSearch] = useState("");
   const [expandedIndex, setExpandedIndex] = useState(NaN);
