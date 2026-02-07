@@ -41,8 +41,8 @@ The project uses i18n. If you need to add new translated texts, simply edit the 
 
 More specific information (name, projects, professional experience, etc.) is defined in the following JSON files:
 
-- Portfolio information (Brazilian Portuguese): [src/assets/portfolioData/infos.pt.json](src/assets/portfolioData/infos.pt.json)
-- Portfolio information (English): [src/assets/portfolioData/infos.en.json](src/assets/portfolioData/infos.en.json)
+- Portfolio information (Brazilian Portuguese): [public/portfolioData/infos.pt.json](public/portfolioData/infos.pt.json)
+- Portfolio information (English): [public/portfolioData/infos.en.json](public/portfolioData/infos.en.json)
 
 ## License
 
