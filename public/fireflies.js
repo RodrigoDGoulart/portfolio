@@ -7,6 +7,16 @@ const ctx = canvas.getContext("2d");
 let lastMeasuredH = -1;
 let lastMeasuredW = -1;
 
+// --- config de tamanho por breakpoint ---
+const MOBILE_MAX_WIDTH = 768; // ajuste se quiser
+const IS_MOBILE = window.innerWidth <= MOBILE_MAX_WIDTH;
+
+const SIZE_BASE = IS_MOBILE ? 30 : 40;
+const SIZE_RANGE = IS_MOBILE ? 30 : 50;
+const QUANTITY = IS_MOBILE ? 70 : 300;
+const LIFESPAN_BASE = IS_MOBILE ? 240 : 700;
+const LIFESPAN_RANGE = IS_MOBILE ? 300 : 800;
+
 // Converte "#RRGGBB" -> "rgba(r,g,b,a)"
 function hexToRgba(hex, a) {
   const h = hex.replace("#", "");
@@ -22,7 +32,7 @@ class Firefly {
     this.y = Math.random() * h;
 
     // ✅ TAMANHO MAIOR (range)
-    this.s = 30 + Math.random() * 15;
+    this.s = SIZE_BASE + Math.random() * SIZE_RANGE;
 
     this.ang = Math.random() * 2 * Math.PI;
     this.v = 2;
@@ -31,7 +41,7 @@ class Firefly {
 
     // ✅ FADE IN / OUT
     this.age = 0;
-    this.lifespan = 240 + Math.random() * 180; // frames (4s..7s a 60fps)
+    this.lifespan = LIFESPAN_BASE + Math.random() * LIFESPAN_RANGE; // frames (4s..7s a 60fps)
     this.alpha = 0;
 
     // quando termina a vida, ao invés de sumir instant, começa "morrendo"
@@ -77,9 +87,9 @@ class Firefly {
 
 let f = [];
 
-function draw(color, quantity = 76) {
+function draw(color) {
   // quantidade total e taxa de spawn (ajustáveis)
-  const MAX = quantity;
+  const MAX = QUANTITY;
   const SPAWN_PER_FRAME = 3; // antes era 10 por chamada; com 2 fica mais leve e suave
 
   if (f.length < MAX) {
@@ -125,7 +135,7 @@ window.requestAnimFrame = (function () {
 function loop() {
   window.requestAnimFrame(loop);
   ctx.clearRect(0, 0, w, h);
-  draw("#cd4fffff", 150);
+  draw("#cd4fffff");
 }
 
 function getTargetHeight() {
