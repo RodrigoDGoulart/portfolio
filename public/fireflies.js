@@ -22,7 +22,7 @@ class Firefly {
     this.y = Math.random() * h;
 
     // ✅ TAMANHO MAIOR (range)
-    this.s = 100 + Math.random() * 60; // 80..140
+    this.s = 30 + Math.random() * 15;
 
     this.ang = Math.random() * 2 * Math.PI;
     this.v = 2;
