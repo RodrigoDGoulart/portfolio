@@ -2,7 +2,7 @@
 
 # Rodrigo Goulart Portfolio
 
-This repository contains the source code of my personal portfolio, created to present my background, education, professional experience, and projects I developed or actively participated in. It allows content changes without necessarily modifying the code itself—only by editing JSON files and also provides support for both English and Portuguese.
+This repository contains the source code of my personal portfolio, created to present my background, education, professional experience, and projects I developed or actively participated in. It allows content changes without necessarily modifying the code itself, only by editing JSON files and also provides support for both English and Portuguese.
 
 ## Running the Project
 
