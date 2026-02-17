@@ -54,5 +54,9 @@
   .container {
     border-radius: 0;
     border-inline: 0;
+
+    .projects_container {
+      width: calc(100% - 32px);
+    }
   }
 }
