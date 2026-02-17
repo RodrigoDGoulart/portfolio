@@ -44,12 +44,15 @@ export default function ActionButton(props: Props) {
       ...props.dropdownMenuProps,
     };
 
-    function handleCopy(e: React.MouseEvent, value: string) {
+    async function handleCopy(e: React.MouseEvent, value: string) {
       e.preventDefault();
       e.stopPropagation();
 
-      navigator.clipboard.writeText(value);
-      setToastMessage(`<b>${value}</b> ${t("coppied_success")}`);
+      try {
+        await navigator.clipboard.writeText(value);
+      } finally {
+        setToastMessage(`<b>${value}</b> ${t("coppied_success")}`);
+      }
     }
 
     return (
