@@ -23,6 +23,21 @@ function normalize(str: string) {
     .trim();
 }
 
+function focusElementById(id: string) {
+  const element = document.getElementById(id);
+
+  if (!element) return;
+
+  // rola suavemente até o elemento
+  element.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+
+  // dá foco (se possível)
+  element.focus({ preventScroll: true });
+}
+
 export default function Projects() {
   const { t } = useTranslation();
   const { texts } = usePortfolioData();
@@ -100,14 +115,23 @@ export default function Projects() {
         {filteredItems.length !== 0 ? (
           filteredItems.map((project, index) => (
             <Card
+              id={`project-card-${index}`}
               key={index}
               content={project}
               expaned={index === expandedIndex}
-              onExpandClick={() =>
-                index !== expandedIndex
-                  ? setExpandedIndex(index)
-                  : setExpandedIndex(NaN)
-              }
+              onExpandClick={() => {
+                if (index !== expandedIndex) {
+                  setExpandedIndex(index);
+                  focusElementById(`project-card-${index}`);
+                } else {
+                  setExpandedIndex(NaN);
+                }
+              }}
+              onContract={() => {
+                if (isNaN(expandedIndex)) {
+                  focusElementById(`project-card-${index}`);
+                }
+              }}
             />
           ))
         ) : (

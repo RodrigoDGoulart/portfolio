@@ -18,11 +18,13 @@ interface Props {
   content: ProjectType;
   onExpandClick?: () => void;
   expaned?: boolean;
+  id?: string;
+  onContract?: () => void;
 }
 
 export default function Card({ content, ...props }: Props) {
   const [renderExpanded, setRenderExpanded] = useState<boolean>(
-    !!props.expaned
+    !!props.expaned,
   );
   const [isFading, setIsFading] = useState(false);
 
@@ -68,10 +70,12 @@ export default function Card({ content, ...props }: Props) {
       requestAnimationFrame(() => {
         measureHeight();
         setIsFading(false);
+        props.onContract?.();
       });
     }, 200);
 
     return () => window.clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.expaned, renderExpanded]);
 
   useLayoutEffect(() => {
@@ -184,7 +188,7 @@ export default function Card({ content, ...props }: Props) {
   }
 
   return (
-    <div className={styles.shell}>
+    <div className={styles.shell} id={props.id}>
       {/* altura anima aqui */}
       <div className={styles.heightWrap} style={{ height }}>
         {/* opacidade/slide só no conteúdo */}
