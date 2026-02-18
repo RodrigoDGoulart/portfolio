@@ -5,19 +5,17 @@ import ReactDOM from "react-dom";
 import HamburguerIcon from "../../../assets/icons/hamburguer.svg?react";
 
 import { LinkType, SocialMediaType } from "../../../@types";
-import Button from "../../Button";
 import MadeWithLove from "../../MadeWithLove";
 import { useState } from "react";
 import classNames from "classnames";
 import { useTranslation } from "react-i18next";
 import { usePortfolioData } from "../../../contexts/PortfolioDataContext";
+import LinkButton from "../../LinkButton";
 
 interface Props {
   socialMedia: SocialMediaType[];
   pageLinks: LinkType[];
   onClose: () => void;
-  onPageClick: (url: string) => void;
-  onSocialMediaClick: (url: string) => void;
 }
 
 export default function ModalMenu(props: Props) {
@@ -45,35 +43,30 @@ export default function ModalMenu(props: Props) {
         <ul>
           {props.pageLinks.map((link, index) => (
             <li key={link.url}>
-              <Button
-                key={index}
-                styleType="text-only"
-                onClick={() => props.onPageClick(link.url)}
-              >
+              <LinkButton key={index} styleType="text-only" href={link.url}>
                 {link.label}
-              </Button>
+              </LinkButton>
             </li>
           ))}
         </ul>
         <div className={styles.divisor}></div>
         <div className={styles.social_medias}>
           {props.socialMedia.map((socialMedia) => (
-            <button
-              key={socialMedia.url}
-              onClick={() => props.onSocialMediaClick(socialMedia.url)}
-            >
+            <a key={socialMedia.url} href={socialMedia.url}>
               <socialMedia.icon className={styles.social_media__icon} />
               <span>{socialMedia.label}</span>
-            </button>
+            </a>
           ))}
         </div>
         <div className={styles.spacing}></div>
-        <Button
-          onClick={() => props.onSocialMediaClick(texts.portfolio_repo_url)}
+        <LinkButton
+          href={texts.portfolio_repo_url}
+          target="_blank"
           styleType="link"
+          style={{ textAlign: "center" }}
         >
           {t("footer.see_this_portfolio_repository")}
-        </Button>
+        </LinkButton>
         <MadeWithLove wrapRow />
         <div className={styles.license_container}>
           <span className={styles.license_txt}>© 2026 Rodrigo Goulart</span>

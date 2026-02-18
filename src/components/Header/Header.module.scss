@@ -27,9 +27,10 @@
 
   .social_media {
     display: flex;
+    align-items: center;
     gap: 12px;
 
-    button {
+    a {
       background: none;
       border: none;
       padding: 0;

@@ -6,13 +6,13 @@ import HamburguerIcon from "../../assets/icons/hamburguer.svg?react";
 
 import { LinkType } from "../../@types";
 
-import Button from "../Button";
 import ModalMenu from "./ModalMenu";
 
 import { useState } from "react";
 import LanguageSelect from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
 import { usePortfolioData } from "../../contexts/PortfolioDataContext";
+import LinkButton from "../LinkButton";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -26,15 +26,6 @@ export default function Header() {
     { label: t("header.projects"), url: "#projects" },
   ];
 
-  function handlePageClick(page: string) {
-    window.location.hash = "";
-    window.location.hash = page;
-  }
-
-  function handleSocialMediaClick(page: string) {
-    window.open(page, "_blank");
-  }
-
   function handleMenuClose() {
     setIsModalOpen(false);
   }
@@ -46,8 +37,6 @@ export default function Header() {
           pageLinks={LINKS}
           socialMedia={SOCIAL_MEDIA}
           onClose={handleMenuClose}
-          onPageClick={handlePageClick}
-          onSocialMediaClick={handleSocialMediaClick}
         />
       )}
       <button
@@ -56,17 +45,19 @@ export default function Header() {
       >
         <HamburguerIcon className={styles.hamb_btn__icon} />
       </button>
-      <Logo className={styles.logo} />
+      <a href="#home">
+        <Logo className={styles.logo} />
+      </a>
       <nav>
         <ul>
           {LINKS.map((link, index) => (
             <li key={index}>
-              <Button
+              <LinkButton
                 styleType="text-only"
-                onClick={() => handlePageClick(link.url)}
+                href={link.url}
               >
                 {link.label}
-              </Button>
+              </LinkButton>
             </li>
           ))}
         </ul>
@@ -74,12 +65,11 @@ export default function Header() {
       <div className={styles.right_content}>
         <div className={styles.social_media}>
           {SOCIAL_MEDIA.map((socialMedia, index) => (
-            <button key={index}>
+            <a key={index} href={socialMedia.url} target="_blank">
               <socialMedia.icon
                 className={styles.social_media__icon}
-                onClick={() => handleSocialMediaClick(socialMedia.url)}
               />
-            </button>
+            </a>
           ))}
         </div>
         <div className={styles.lang_select_div}>

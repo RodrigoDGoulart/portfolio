@@ -1,0 +1,179 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  
+  &.primary {
+    background-color: $cyan;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      background-color: $cyan-lighter;
+      box-shadow: 0 0 10px 4px $cyan-lighter;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+  }
+  
+  &.no-padding {
+    padding: 0;
+    border: none;
+    background: none;
+  }
+
+  &.secondary {
+    background-color: transparent;
+    border: 1px solid $cyan;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 6px 1px $cyan, inset 0 0 6px 1px $cyan;
+      transition: box-shadow 0.3s ease;
+      
+      .label {
+        text-shadow: 
+          $cyan 0 0 1px,
+          $cyan 0 0 3px;
+        transition: text-shadow 0.3s ease;
+      }
+
+      .icon {
+        filter: drop-shadow(0 0 6px $cyan);
+        transition: filter 0.3s ease;
+      }
+    }
+  }
+
+  &.text-only {
+    &:hover {
+      .label {
+        color: $pink;
+        text-shadow: 
+          $pink 0 0 2px,
+          $pink 0 0 4px;
+        transition: text-shadow 0.3s ease, color
+        0.3s ease;
+      }
+      .icon {
+        color: $pink;
+        filter: drop-shadow(0 0 6px $pink);
+        transition: color 0.3s ease, filter 0.3s ease;
+      }
+    }
+  }
+
+  &.link {
+    .label {
+      font-weight: normal;
+      color: $cyan;
+      text-decoration: underline;
+      transition: text-shadow 0.3s ease, color 0.3s ease;
+    }
+
+    &:hover {
+      .label {
+        color: $cyan-lighter;
+        text-shadow: 
+          $cyan-lighter 0 0 2px,
+          $cyan-lighter 0 0 4px;
+        transition: text-shadow 0.3s ease, color 0.3s ease;
+      }
+      .icon {
+        color: $cyan-lighter;
+        filter: drop-shadow(0 0 6px $cyan-lighter);
+        transition: color 0.3s ease, filter 0.3s ease;
+      }
+    }
+  }
+
+  &.tab {
+    background: none;
+    border-radius: 0;
+    border-bottom: 2px solid $gray-400;
+    transition: border 0.3s ease;
+    padding-block: 8px;
+
+    .label {
+      color: $gray-400;
+    }
+
+    &.active {
+      transition: border 0.3s ease;
+      border-color: $cyan;
+      .label {
+        color: $cyan;
+        text-shadow: $cyan 0 0 3px;
+        transition: text-shadow 0.3s ease, color 0.3s ease;
+      }
+      .icon {
+        color: $cyan;
+        filter: drop-shadow(0 0 6px $cyan);
+        transition: color 0.3s ease, filter 0.3s ease;
+      }
+    }
+    &:hover {
+      transition: border 0.3s ease;
+      border-color: $cyan-lighter;
+      .label {
+        color: $cyan-lighter;
+        text-shadow: $cyan-lighter 0 0 3px;
+        transition: text-shadow 0.3s ease, color 0.3s ease;
+      }
+      .icon {
+        color: $cyan-lighter;
+        filter: drop-shadow(0 0 6px $cyan-lighter);
+        transition: color 0.3s ease, filter 0.3s ease;
+      }
+    }
+  }
+}
+
+.label {
+  font-weight: bold;
+  font-size: 16px;
+  
+  &.primary {
+    color: $dark-gray-850;
+  }
+
+  &.secondary {
+    color: $cyan;
+  }
+  
+  &.text-only {
+    color: $cyan;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+  }
+  
+  &.tab {
+    color: $dark-gray-600;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+  }
+}
+
+.icon {
+  transition: color 0.3s ease, filter 0.3s ease;
+  &.primary {
+    color: $dark-gray-850;
+  }
+
+  &.secondary {
+    color: $pink;
+  }
+
+  &.text-only {
+    color: $white;
+  }
+
+  &.link {
+    color: $cyan;
+  }
+
+  &.tab {
+    color: $dark-gray-600;
+  }
+}

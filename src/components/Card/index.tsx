@@ -5,7 +5,6 @@ import imgFallback from "../../assets/fallback-img.png";
 import ArrowDownIcon from "../../assets/icons/arrowdown.svg?react";
 import ArrowUpIcon from "../../assets/icons/arrowup.svg?react";
 
-import Button from "../Button";
 import Title from "../Title";
 import Text from "../Text";
 import BadgeContainer from "../BadgeContainer";
@@ -13,6 +12,7 @@ import ImageSlides from "../ImageSlides";
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import classNames from "classnames";
+import LinkButton from "../LinkButton";
 
 interface Props {
   content: ProjectType;
@@ -31,22 +31,19 @@ export default function Card({ content, ...props }: Props) {
   const [height, setHeight] = useState<number>(0);
   const measureRef = useRef<HTMLDivElement | null>(null);
 
-  function handleLinkClick(url: string) {
-    window.open(url, "_blank");
-  }
-
   const Links = useMemo(() => {
     return (
       <div className={styles.links}>
         {content.links.map((link) => (
-          <Button
+          <LinkButton
             styleType="link"
             key={link.url}
-            onClick={() => handleLinkClick(link.url)}
+            href={link.url}
+            target="_blank"
             icon={link.icon}
           >
             {link.label}
-          </Button>
+          </LinkButton>
         ))}
       </div>
     );

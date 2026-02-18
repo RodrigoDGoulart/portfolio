@@ -14,15 +14,16 @@
   .social_media_container {
     display: flex;
     align-items: center;
+    gap: 12px;
 
-    button {
+    a {
       background: none;
       border: none;
       cursor: pointer;
 
       .social_media__icon {
         color: $gray-400;
-        width: 16px;
+        width: 18px;
         height: auto;
         transition: color 0.3s;
       }
