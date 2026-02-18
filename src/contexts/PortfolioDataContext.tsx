@@ -17,6 +17,7 @@ interface PortfolioDataContextType {
   loading: boolean;
   texts: PortfolioDataType;
   socialMedias: SocialMediaType[];
+  language: string;
 }
 
 const PortfolioDataContext = createContext<PortfolioDataContextType>(
@@ -102,6 +103,7 @@ export const PortfolioDataContextProvider = ({
         texts: portfolioData as PortfolioDataType,
         socialMedias,
         loading,
+        language: lang
       }}
     >
       {children}

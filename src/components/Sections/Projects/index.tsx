@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Input from "../../Input";
 import Title from "../../Title";
 
@@ -40,10 +40,12 @@ function focusElementById(id: string) {
 
 export default function Projects() {
   const { t } = useTranslation();
-  const { texts } = usePortfolioData();
+  const { texts, language } = usePortfolioData();
 
   const [search, setSearch] = useState("");
   const [expandedIndex, setExpandedIndex] = useState(NaN);
+  const [isChangingLanguage, setIsChangingLanguage] = useState(false);
+  const [lastLanguage, setLastLanguage] = useState(language);
 
   // 1) lista base (mapeada do JSON) - não depende de search
   const allItems = useMemo<ProjectType[]>(() => {
@@ -92,6 +94,14 @@ export default function Projects() {
     });
   }, [search, allItems]);
 
+  useEffect(() => {
+    if (language !== lastLanguage) {
+      setLastLanguage(language);
+      setIsChangingLanguage(true);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [language]);
+
   return (
     <div id="projects" className={styles.container}>
       <Title className={styles.title} hightlight>
@@ -127,12 +137,20 @@ export default function Projects() {
                 }
               }}
               onContract={() => {
-                if (isNaN(expandedIndex)) {
-                  focusElementById(`project-card-${index}`);
+                if (isChangingLanguage) {
+                  setIsChangingLanguage(false);
+                } else {
+                  if (isNaN(expandedIndex)) {
+                    focusElementById(`project-card-${index}`);
+                  }
                 }
               }}
               onExpand={() => {
-                focusElementById(`project-card-${index}`);
+                if (isChangingLanguage) {
+                  setIsChangingLanguage(false);
+                } else {
+                  focusElementById(`project-card-${index}`);
+                }
               }}
             />
           ))
