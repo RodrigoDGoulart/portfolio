@@ -20,6 +20,7 @@ interface Props {
   expaned?: boolean;
   id?: string;
   onContract?: () => void;
+  onExpand?: () => void;
 }
 
 export default function Card({ content, ...props }: Props) {
@@ -95,6 +96,18 @@ export default function Card({ content, ...props }: Props) {
     return () => ro.disconnect();
   }, [renderExpanded]);
 
+  // chama onExpand no fim da animação
+  useEffect(() => {
+    if (!props.expaned) return;
+
+    const t = window.setTimeout(() => {
+      props.onExpand?.();
+    }, 450);
+
+    return () => window.clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.expaned]);
+
   function CompactContent() {
     return (
       <div className={styles.compactGrid}>
@@ -106,7 +119,6 @@ export default function Card({ content, ...props }: Props) {
             e.currentTarget.src = imgFallback;
           }}
           className={styles.thumbnail}
-          id={props.id}
         />
 
         <div className={styles.content}>
@@ -144,7 +156,7 @@ export default function Card({ content, ...props }: Props) {
   function ExpandedContent() {
     return (
       <div className={styles.expandedStack}>
-        <div className={styles.media} id={props.id}>
+        <div className={styles.media}>
           <ImageSlides imgs={content.slides} />
         </div>
 
@@ -186,7 +198,7 @@ export default function Card({ content, ...props }: Props) {
   }
 
   return (
-    <div className={styles.shell}>
+    <div className={styles.shell} id={props.id}>
       {/* altura anima aqui */}
       <div className={styles.heightWrap} style={{ height }}>
         {/* opacidade/slide só no conteúdo */}

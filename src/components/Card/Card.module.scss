@@ -86,7 +86,9 @@
   overflow: hidden;
 }
 
-.desc, .descExpanded, .details {
+.desc,
+.descExpanded,
+.details {
   flex: 1;
   font-size: 15px;
   text-align: justify;
@@ -124,6 +126,7 @@
   .compactGrid {
     flex-direction: column;
     height: auto;
+
     .content {
       .badges {
         display: none;

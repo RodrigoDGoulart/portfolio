@@ -122,7 +122,6 @@ export default function Projects() {
               onExpandClick={() => {
                 if (index !== expandedIndex) {
                   setExpandedIndex(index);
-                  focusElementById(`project-card-${index}`);
                 } else {
                   setExpandedIndex(NaN);
                 }
@@ -131,6 +130,9 @@ export default function Projects() {
                 if (isNaN(expandedIndex)) {
                   focusElementById(`project-card-${index}`);
                 }
+              }}
+              onExpand={() => {
+                focusElementById(`project-card-${index}`);
               }}
             />
           ))
