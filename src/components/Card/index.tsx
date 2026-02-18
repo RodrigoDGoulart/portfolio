@@ -109,6 +109,7 @@ export default function Card({ content, ...props }: Props) {
             e.currentTarget.src = imgFallback;
           }}
           className={styles.thumbnail}
+          id={props.id}
         />
 
         <div className={styles.content}>
@@ -146,7 +147,7 @@ export default function Card({ content, ...props }: Props) {
   function ExpandedContent() {
     return (
       <div className={styles.expandedStack}>
-        <div className={styles.media}>
+        <div className={styles.media} id={props.id}>
           <ImageSlides imgs={content.slides} />
         </div>
 
@@ -188,7 +189,7 @@ export default function Card({ content, ...props }: Props) {
   }
 
   return (
-    <div className={styles.shell} id={props.id}>
+    <div className={styles.shell}>
       {/* altura anima aqui */}
       <div className={styles.heightWrap} style={{ height }}>
         {/* opacidade/slide só no conteúdo */}
