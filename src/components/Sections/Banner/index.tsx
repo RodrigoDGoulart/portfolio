@@ -174,7 +174,7 @@ export default function Banner() {
           </Title>
 
           <div className={styles.subtitle}>
-            {t("banner.prefixsubtitle")}
+            <span>{t("banner.prefixsubtitle")}</span>
             <b
               style={{
                 color: displayColor,
@@ -184,7 +184,7 @@ export default function Banner() {
             >
               {displayText}
             </b>
-            {t("banner.sufixsubtitle")}
+            <span>{t("banner.sufixsubtitle")}</span>
           </div>
         </div>
 
