@@ -19,8 +19,12 @@
       "color": "#E252FF"
     },
     {
-      "name": "Fullstack",
+      "name": "Mobile",
       "color": "#52FF77"
+    },
+    {
+      "name": "Fullstack",
+      "color": "#FF4545"
     },
     {
       "name": "React",
@@ -153,6 +157,26 @@
     }
   ],
   "projects": [
+    {
+      "imgs": [
+        "images/project_imgs/geonexus.png"
+      ],
+      "title": "GeoNexus Mobile",
+      "subtitle": "Field conflicts manager - Tria Software [2026]",
+      "badges": [
+        "arcgis",
+        "react-native",
+        "android"
+      ],
+      "desc": "<b>GeoNexus</b> is a mobile application designed for conflict management in railway construction projects, enabling the registration, monitoring, and resolution of occurrences related to interactions between field operations and impacted landowners. <b>The solution was developed to support operational teams during field activities, providing features such as real-time notifications, configurable dynamic forms, and map integration to assist decision-making.</b> <b>I acted as the main developer responsible for the mobile application</b>, contributing to the implementation of new features, continuous improvements, maintenance, and overall platform stability used in field operations.",
+      "details": "My role in the project was focused on the mobile front, where I was responsible for the technical ownership, feature evolution, and continuous improvement of the application used by field operators. <b>The delivered solutions contributed to increasing operational reliability, reducing the impact of connectivity limitations, and providing a more efficient experience for teams working in remote environments.</b>\nKey contributions to the project:\n<div style='text-align: left'>- Technical ownership of the mobile application, leading development, feature evolution, maintenance, and version management.</div>\n<div style='text-align: left'>- Implementation and maintenance of conflict registration workflows, enabling structured data collection directly in the field.</div>\n<div style='text-align: left'>- Development of dynamic form capabilities, allowing administrators to configure and publish new workflows without requiring application updates.</div>\n<div style='text-align: left'>- Integration with ArcGIS maps to provide spatial visualization and operational support during conflict analysis and resolution.</div>\n<div style='text-align: left'>- Implementation of an offline-first architecture, including data download, local persistence, and automatic synchronization with the server once connectivity was restored.</div>\n<div style='text-align: left'>- Integration with Firebase Cloud Messaging for notifications related to new conflicts and operational updates.</div>\n<div style='text-align: left'>- Continuous bug fixing, stability improvements, and collaboration with the team to evolve the overall solution architecture.</div>",
+      "links": [
+        {
+          "name": "GeoNexus (in Brazilian portuguese)",
+          "url": "https://www.geonexus.com.br/"
+        }
+      ]
+    },
     {
       "imgs": [
         "images/project_imgs/yardex/thumbnail.png"
