@@ -136,7 +136,16 @@
       "badges": [
         "mysql",
         "postgre",
-        "mongodb"
+        "mongodb",
+        "supabase"
+      ]
+    },
+    {
+      "name": "Artificial Inteligence",
+      "badges": [
+        "open-ai",
+        "ollama",
+        "groq"
       ]
     },
     {
@@ -150,8 +159,6 @@
         "vercel",
         "renderer",
         "figma",
-        "open-ai",
-        "ollama",
         "firebase"
       ]
     }

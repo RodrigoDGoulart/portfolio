@@ -28,12 +28,14 @@ import rendererIcon from "@/assets/icons/stacks/renderer.svg?react";
 import figmaIcon from "@/assets/icons/stacks/figma.svg?react";
 import openaiIcon from "@/assets/icons/stacks/openai.svg?react";
 import ollamaIcon from "@/assets/icons/stacks/ollama.svg?react";
-import springIcon from "@/assets/icons/stacks/spring.svg?react"
-import djangoIcon from "@/assets/icons/stacks/django.svg?react"
-import firebaseIcon from "@/assets/icons/stacks/firebase.svg?react"
-import bootstrapIcon from "@/assets/icons/stacks/bootstrap.svg?react"
-import dockerIcon from "@/assets/icons/stacks/docker.svg?react"
-import yoloIcon from "@/assets/icons/stacks/yolo.svg?react"
+import springIcon from "@/assets/icons/stacks/spring.svg?react";
+import djangoIcon from "@/assets/icons/stacks/django.svg?react";
+import firebaseIcon from "@/assets/icons/stacks/firebase.svg?react";
+import bootstrapIcon from "@/assets/icons/stacks/bootstrap.svg?react";
+import dockerIcon from "@/assets/icons/stacks/docker.svg?react";
+import yoloIcon from "@/assets/icons/stacks/yolo.svg?react";
+import supabaseIcon from "@/assets/icons/stacks/supabase.svg?react";
+import groqIcon from "@/assets/icons/stacks/groq.svg?react";
 
 import { BadgeType } from "../@types";
 
@@ -370,6 +372,24 @@ export const OllamaBadge: BadgeType = {
   label: "Ollama",
 };
 
+export const SupabaseBadge: BadgeType = {
+  color: {
+    primary: "#00a100ff",
+    secondary: "white",
+  },
+  icon: supabaseIcon,
+  label: "Supabase",
+};
+
+export const GroqBadge: BadgeType = {
+  color: {
+    primary: "rgb(255, 94, 0)",
+    secondary: "white",
+  },
+  icon: groqIcon,
+  label: "Groq",
+};
+
 const BADGES = {
   "react-native": ReactNativeBadge,
   react: ReactBadge,
@@ -408,6 +428,8 @@ const BADGES = {
   bootstrap: BootstrapBadge,
   docker: DockerBadge,
   yolo: YoloBadge,
+  supabase: SupabaseBadge,
+  groq: GroqBadge,
 } satisfies Record<string, BadgeType>;
 
 type BadgeName = keyof typeof BADGES;
