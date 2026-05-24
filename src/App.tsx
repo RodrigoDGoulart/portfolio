@@ -8,12 +8,14 @@ import Footer from "./components/Footer";
 import { ToastContextProvider } from "./contexts/ToastContext";
 import { usePortfolioData } from "./contexts/PortfolioDataContext";
 import { PropagateLoader } from "react-spinners";
+import StructuredData from "./components/StructuredData";
 
 function App() {
   const { loading } = usePortfolioData();
 
   return (
     <ToastContextProvider>
+      <StructuredData />
       <div id="app-scroll">
         <div className="scroll-inner">
           {loading ? (

@@ -1,0 +1,11 @@
+{
+  "site_url": "https://rodrigogoulart.dev",
+  "profile_image": "readme-banner.png",
+  "default_language": "pt-BR",
+  "available_languages": ["pt-BR", "en-US"],
+  "job_title": "Full Stack Developer",
+  "home_location": {
+    "address_country": "BR",
+    "address_region": "SP"
+  }
+}
