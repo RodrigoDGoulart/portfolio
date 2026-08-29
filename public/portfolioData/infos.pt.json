@@ -1,5 +1,5 @@
 {
-  "curriculum": "curriculo-rodrigo-goulart-02-2026.pdf",
+  "curriculum": "curriculo-rodrigo-goulart-08-2026.pdf",
   "portfolio_repo_url": "https://github.com/RodrigoDGoulart/portfolio",
   "contacts": {
     "whatsapp": "",
@@ -61,39 +61,43 @@
   "about_me": "Eu comecei minha trajetória como designer gráfico, o que me deu uma <b>base sólida em estética, usabilidade e atenção aos detalhes.</b> Foi durante minha formação em <b>Análise e Desenvolvimento de Sistemas pela Fatec</b> que uni essa afinidade com design ao desenvolvimento de software, direcionando meu foco principalmente para o front-end. Desde então, <b>atuo no desenvolvimento de aplicações web e mobile, trabalhando com tecnologias como Laravel, Vue.js, React, Node.js e soluções mobile</b>, sempre participando ativamente do ciclo completo de desenvolvimento.\nAtualmente tenho grande interesse em entender como as coisas funcionam de ponta a ponta, o que me leva a explorar não apenas desenvolvimento de software, mas também áreas como inteligência artificial e eletrônica. Essa postura investigativa reflete diretamente na minha atuação profissional: <b>busco compreender o contexto do projeto, o objetivo do produto e o perfil do usuário antes de implementar soluções.</b> Isso me permite entregar funcionalidades mais completas, correções de bugs mais consistentes e sistemas mais robustos a longo prazo. <b>Atualmente atuo como desenvolvedor mobile pleno</b>, expandindo continuamente meus conhecimentos técnicos e contribuindo também com versionamento, organização de branches e gestão técnica das aplicações.",
   "jobs": [
     {
-      "title": "Desenvolvedor Mobile/Front-end",
-      "subtitle": "Tria Software (Outubro/2025 - Atual)",
-      "desc": "- Participação no time de desenvolvimento de aplicação mobile de gestão de conflitos com tecnologia GIS;\n- Responsável pela arquitetura front-end, implementação de novas funcionalidades, versionamento e entregas de sprint;\n- Colaboração com demais times de desenvolvimento, visando garantir consistência UX/UI e entregas de alta qualidade;\n- Manutenção, otimização e evolução da aplicação principal;",
+      "title": "Desenvolvedor Front-end & Designer UI",
+      "subtitle": "Be Greater (Julho/2026 - Atual)",
+      "desc": "- Desenvolvimento e manutenção de aplicações front-end, com responsabilidade pela experiência das interfaces dos projetos;\n- Criação e prototipação de interfaces utilizando Figma, desde a concepção inicial até a implementação;\n- Desenvolvimento em fluxo AI-first, utilizando ferramentas como Claude para auxiliar na implementação, refatoração, análise de código e resolução de problemas;\n- Colaboração em decisões técnicas e de produto, conectando design de interface e desenvolvimento de software;",
       "badges": [
-        "react-native",
-        "react",
-        "arcgis",
-        "android",
-        "azure-devops"
+        "figma",
+        "vue",
+        "python"
+      ]
+    },
+    {
+      "title": "Desenvolvedor Front-end e Mobile",
+      "subtitle": "Tria Software (Outubro/2025 - Julho/2026)",
+      "desc": "- Desenvolvimento de aplicativo mobile integrado com tecnologia GIS;\n- Responsável pela arquitetura front-end, implementação de novas funcionalidades, versionamento e entregas de sprint;\n- Colaboração entre times, garantindo consistência de interface, experiência do usuário e alta qualidade nas entregas de sprint;\n- Manutenção, otimização e evolução de módulos do aplicativo;",
+      "badges": [
+        "figma",
+        "vue",
+        "python"
       ]
     },
     {
       "title": "Desenvolvedor Full Stack",
       "subtitle": "Boostech (Março/2025 - Outubro/2025)",
-      "desc": "- Participação ativa no desenvolvimento e evolução de aplicação web YMS utilizando Laravel e Vue, entregando constantes melhorias de usabilidade, performance e escalabilidade;\n- Implementação e desenvolvimento de aplicação android com React Native/Expo, integrando funções nativas e expandindo e aumentando a qualidade da aplicação;\n- Entrega de funcionalidades de alto impacto, alinhado com boas práticas de experiência do usuário e arquitetura de software;\n- Definição e aplicação de boas práticas de desenvolvimento com o time, incluindo Clean Code, Conventional Commits e melhorias do controle de versão e workflow;",
+      "desc": "- Participação ativa no desenvolvimento e evolução de aplicação web em Laravel + Vue.js (Inertia), entregando melhorias contínuas de usabilidade, performance e escalabilidade;\n- Implementação e publicação de aplicativo mobile Android com React Native + Expo, integrando recursos nativos e expandindo o alcance da solução;\n- Entrega de novas funcionalidades de alto impacto para o negócio, alinhadas a boas práticas de UX e arquitetura de software;\n- Definição e incentivo ao uso de boas práticas de desenvolvimento no time, incluindo código limpo, Conventional Commits e melhorias no fluxo de versionamento;",
       "badges": [
-        "php",
-        "laravel",
-        "javascript",
+        "figma",
         "vue",
-        "react-native",
-        "android"
+        "python"
       ]
     },
     {
       "title": "Desenvolvedor Front-end/GIS",
       "subtitle": "Imagem (Setembro/2022 - Março/2025)",
-      "desc": "- Desenvolvimento de aplicações interativas focado em GIS com React, Typescript, ArcGIS API e ArcGIS Experience Builder;\n- Criação de scripts Python para automação de workflow e processamento de dados geoespaciais;\n- Paritipação de consultorias técnicas para mapeamento e desenvolvimento de aplicações nativas ArcGIS, dando suporte à clientes desde o design até a implementação de soluções GIS;",
+      "desc": "- Desenvolvimento de aplicações interativas com foco em GIS (Geographic Information Systems), utilizando React, TypeScript, ArcGIS API e widgets personalizados;\n- Criação de scripts Python para automação de rotinas e tratamento de dados geoespaciais;\n- Atuação em consultorias técnicas sobre sistemas de mapas e desenvolvimento, apoiando clientes na idealização e construção de soluções GIS;",
       "badges": [
-        "arcgis",
-        "python",
-        "react",
-        "typescript"
+        "figma",
+        "vue",
+        "python"
       ]
     }
   ],

@@ -1,5 +1,5 @@
 {
-  "curriculum": "rodrigo-goulart-curriculum-2026-02.pdf",
+  "curriculum": "rodrigo-goulart-curriculum-2026-08.pdf",
   "portfolio_repo_url": "https://github.com/RodrigoDGoulart/portfolio",
   "contacts": {
     "whatsapp": "",
@@ -59,39 +59,43 @@
   "about_me": "I began my journey as a graphic designer, which gave me a <b>strong foundation in aesthetics, usability, and attention to detail.</b> It was during my degree in <b>Systems Analysis and Development at Fatec</b> that I combined this affinity for design with software development, focusing mainly on front-end development. Since then, <b>I have been working on web and mobile applications, using technologies such as Laravel, Vue.js, React, Node.js, and mobile solutions</b>, always actively participating in the entire development lifecycle.\nCurrently, I have a strong interest in understanding how things work end to end, which leads me to explore not only software development but also areas such as artificial intelligence and electronics. This investigative mindset is directly reflected in my professional approach: <b>I strive to understand the project context, the product's goals, and the user profile before implementing solutions.</b> This allows me to deliver more complete features, more consistent bug fixes, and more robust systems in the long term. <b>I currently work as a mid-level mobile developer</b>, continuously expanding my technical knowledge and also contributing to version control, branch organization, and the technical management of applications.",
   "jobs": [
     {
-      "title": "Mobile/Front-end Developer",
-      "subtitle": "Tria Software (October/2025 - Present)",
-      "desc": "- Participation in the development team of a mobile application for conflict management using GIS technology;\n- Responsible for front-end architecture, implementation of new features, versioning, and sprint deliveries;\n- Collaboration with other development teams to ensure UX/UI consistency and high-quality deliveries;\n- Maintenance, optimization, and evolution of the main application;",
+      "title": "Front-end Developer & UI Designer",
+      "subtitle": "Be Greater (July/2026 - Present)",
+      "desc": "- Development and maintenance of front-end applications, taking ownership of the projects' user-facing experience;\n- Design and prototyping of interfaces using Figma, from initial concepts to implementation;\n- Development within an AI-first workflow, leveraging tools such as Claude to assist with implementation, refactoring, code analysis and problem-solving;\n- Collaboration on technical and product decisions, bridging interface design and software development;",
       "badges": [
-        "react-native",
-        "react",
-        "arcgis",
-        "android",
-        "azure-devops"
+        "figma",
+        "vue",
+        "python"
+      ]
+    },
+    {
+      "title": "Mobile Front-end Developer",
+      "subtitle": "Tria Software (October/2025 - July/2026)",
+      "desc": "- Development of a mobile application integrated with GIS technologies;\n- Responsible for front-end architecture, feature implementation, versioning and sprint deliveries;\n- Collaboration with cross-functional teams to ensure consistent UX and high-quality deliverables;\n- Maintenance, optimization and evolution of core application modules;",
+      "badges": [
+        "figma",
+        "vue",
+        "python"
       ]
     },
     {
       "title": "Full Stack Developer",
       "subtitle": "Boostech (March/2025 - October/2025)",
-      "desc": "- Active participation in the development and evolution of a YMS web application using Laravel and Vue, delivering continuous improvements in usability, performance, and scalability;\n- Implementation and development of an Android application with React Native/Expo, integrating native features and expanding and improving application quality;\n- Delivery of high-impact features aligned with best practices in user experience and software architecture;\n- Definition and application of development best practices with the team, including Clean Code, Conventional Commits, and improvements to version control and workflow;",
+      "desc": "- Active participation in the development and evolution of a YMS web application built with Laravel + Vue.js, delivering continuous improvements in usability, performance and scalability;\n- Implementation and deployment of an Android mobile application using React Native + Expo, integrating native features and expanding the solution's reach;\n- Delivery of high-impact features aligned with best practices in UX and software architecture;\n- Definition and promotion of development best practices within the team, including clean code, Conventional Commits and improvements to version control workflows;",
       "badges": [
-        "php",
-        "laravel",
-        "javascript",
+        "figma",
         "vue",
-        "react-native",
-        "android"
+        "python"
       ]
     },
     {
       "title": "Front-end/GIS Developer",
       "subtitle": "Imagem (September/2022 - March/2025)",
-      "desc": "- Development of interactive GIS-focused applications using React, TypeScript, ArcGIS API, and ArcGIS Experience Builder;\n- Creation of Python scripts for workflow automation and geospatial data processing;\n- Participation in technical consulting for mapping and development of native ArcGIS applications, supporting clients from design to the implementation of GIS solutions;",
+      "desc": "- Development of interactive applications focused on GIS (Geographic Information Systems), using React, TypeScript, ArcGIS API and Experience Builder custom widgets;\n- Creation of Python scripts for workflow automation and geospatial data processing;\n- Participation in technical consulting for mapping and development systems, supporting clients in the design and implementation of GIS solutions;",
       "badges": [
-        "arcgis",
-        "python",
-        "react",
-        "typescript"
+        "figma",
+        "vue",
+        "python"
       ]
     }
   ],
