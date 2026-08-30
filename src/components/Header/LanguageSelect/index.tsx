@@ -2,22 +2,66 @@ import styles from "./LanguageSelect.module.scss";
 
 import ActionButton from "../../ActionButton";
 
-import UsaIcon from "../../../assets/icons/countryFlags/usa_colored.svg?react";
-import BrIcon from "../../../assets/icons/countryFlags/brazil_colored.svg?react";
 import ArrowDownIcon from "../../../assets/icons/arrowdown.svg?react";
 import i18next from "i18next";
 import { useCallback } from "react";
-import { LanguageType } from "../../../@types";
+import { IconType, LanguageType } from "../../../@types";
+
+const EnIcon: IconType = ({ className, ...props }) => (
+  <svg
+    className={className}
+    viewBox="0 0 32 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    style={{ width: 36, height: 18 }}
+    {...props}
+  >
+    <text
+      x="16"
+      y="12"
+      textAnchor="middle"
+      dominantBaseline="middle"
+      fill="currentColor"
+      fontSize="16"
+      fontWeight="700"
+    >
+      EN
+    </text>
+  </svg>
+);
+
+const BrIcon: IconType = ({ className, ...props }) => (
+  <svg
+    className={className}
+    viewBox="0 0 32 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    style={{ width: 36, height: 18 }}
+    {...props}
+  >
+    <text
+      x="16"
+      y="12"
+      textAnchor="middle"
+      dominantBaseline="middle"
+      fill="currentColor"
+      fontSize="16"
+      fontWeight="700"
+    >
+      BR
+    </text>
+  </svg>
+);
 
 export default function LanguageSelect() {
   const current = i18next.language;
 
-  const getCurrentFlag = useCallback(() => {
+  const getCurrentLanguageCode = useCallback(() => {
     switch (current) {
       case "pt":
-        return <BrIcon className={styles.country_flag} />;
+        return "BR";
       case "en":
-        return <UsaIcon className={styles.country_flag} />;
+        return "EN";
     }
   }, [current]);
 
@@ -29,9 +73,9 @@ export default function LanguageSelect() {
     <ActionButton
       button={
         <button className={styles.btn}>
-          <div className={styles.flag_border}>
-            {getCurrentFlag()}
-          </div>
+          <span className={styles.language_code}>
+            {getCurrentLanguageCode()}
+          </span>
           <ArrowDownIcon className={styles.arrow} />
         </button>
       }
@@ -42,7 +86,7 @@ export default function LanguageSelect() {
           onClick: () => setLanguage("pt"),
         },
         {
-          icon: UsaIcon,
+          icon: EnIcon,
           label: "English",
           onClick: () => setLanguage("en"),
         },

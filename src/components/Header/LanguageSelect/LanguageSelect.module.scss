@@ -6,20 +6,12 @@
   gap: 4px;
   cursor: pointer;
 
-  .flag_border {
-    transition: all 0.5s;
-    border: 2px solid $cyan;
-    border-radius: 100%;
-    width: 26px;
-    height: 26px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .country_flag {
-    width: 20px;
-    height: auto;
+  .language_code {
+    color: $cyan;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    transition: color 0.5s;
   }
 
   .arrow {
@@ -34,8 +26,8 @@
       color: $pink
     }
 
-    .flag_border {
-      border-color: $pink;
+    .language_code {
+      color: $pink;
     }
   }
 }
