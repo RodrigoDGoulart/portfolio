@@ -172,17 +172,32 @@
   "projects": [
     {
       "imgs": [
+        "images/smartband/thumbnail.png"
+      ],
+      "title": "Smartband - App de coleta em campo",
+      "subtitle": "Tria Software [2026]",
+      "badges": [
+        "react-native",
+        "typescript",
+        "ios"
+      ],
+      "desc": "O <b>Smartband</b> é um aplicativo mobile desenvolvido para apoiar <b>coletas de campo da Bayer</b>, integrando o trabalho de equipes externas a uma solução completa composta por app iOS, back-end e recursos de inteligência artificial. A aplicação foi pensada para organizar o fluxo de identificação de áreas de coleta, gravação de evidências em vídeo e preenchimento de formulários associados aos registros de campo. <b>O projeto como um todo envolveu back-end, integração com sistema de IA e aplicativo iOS</b>, e minha atuação esteve concentrada no desenvolvimento do app mobile utilizado em campo.",
+      "details": "Minha atuação no projeto foi voltada ao <b>desenvolvimento do aplicativo iOS</b>, construindo os fluxos de autenticação, identificação de campos, coleta de vídeos e preenchimento de informações complementares. A experiência precisava ser simples e confiável para uso em atividades externas, com atenção especial a permissões do dispositivo, câmera, localização e continuidade do fluxo de coleta.\nPrincipais atuações no projeto:\n<div style='text-align: left'>- Desenvolvimento das telas e fluxos principais do aplicativo mobile para uso por agentes de campo.</div>\n<div style='text-align: left'>- Implementação de autenticação, persistência de sessão e opções de conveniência como lembrar e-mail e manter usuário conectado.</div>\n<div style='text-align: left'>- Construção do fluxo de identificação de campo por câmera, com leitura de QR Code e direcionamento para os detalhes da área de coleta.</div>\n<div style='text-align: left'>- Implementação do processo de gravação de vídeos associados ao campo, incluindo tratamento de permissões de câmera e localização.</div>\n<div style='text-align: left'>- Desenvolvimento de formulários para complementar os registros coletados em campo antes do envio ao ecossistema da solução.</div>\n<div style='text-align: left'>- Integração do app com serviços do projeto, conectando a experiência mobile ao back-end e aos recursos de inteligência artificial previstos na solução.</div>",
+      "links": []
+    },
+    {
+      "imgs": [
         "images/project_imgs/geonexus.png"
       ],
-      "title": "GeoNexus Mobile",
-      "subtitle": "Gestão de Conflitos em campo - Tria Software [2026]",
+      "title": "Geonexus - Conflito em campo",
+      "subtitle": "Tria Software [2025]",
       "badges": [
         "arcgis",
         "react-native",
         "android"
       ],
-      "desc": "<b>GeoNexus</b> é uma aplicação mobile voltada para o gerenciamento de conflitos em obras ferroviárias, permitindo o registro, acompanhamento e tratamento de ocorrências relacionadas às interações entre operações em campo e proprietários de áreas impactadas pelas obras. <b>A solução foi desenvolvida para apoiar equipes operacionais durante atividades externas, oferecendo recursos como notificações em tempo real, formulários dinâmicos configuráveis e integração com mapas para apoio à tomada de decisão.</b> <b>Atuei como principal responsável pelo desenvolvimento e evolução do aplicativo mobile</b>, contribuindo com implementação de novas funcionalidades, manutenção contínua, correções e estabilidade da plataforma utilizada em campo.",
-      "details": "Minha atuação no projeto esteve concentrada na frente mobile, sendo responsável pela sustentação técnica, evolução funcional e melhoria contínua da aplicação utilizada pelos operadores durante atividades em campo. <b>As entregas realizadas contribuíram para aumentar a confiabilidade operacional da solução, reduzir impactos causados por indisponibilidade de conexão e proporcionar uma experiência mais eficiente para equipes atuando em ambientes remotos.</b>\nPrincipais atuações no projeto:\n<div style='text-align: left'>- Liderança técnica da frente mobile, atuando no desenvolvimento, evolução e versionamento da aplicação utilizada pelos operadores de campo.</div>\n<div style='text-align: left'>- Implementação e manutenção de formulários para registro de conflitos, permitindo coleta estruturada de informações diretamente em campo.</div>\n<div style='text-align: left'>- Desenvolvimento da funcionalidade de formulários dinâmicos, possibilitando que administradores configurassem e disponibilizassem novos fluxos sem necessidade de atualização do aplicativo.</div>\n<div style='text-align: left'>- Integração com mapas utilizando ArcGIS, permitindo visualização espacial e suporte operacional durante o tratamento dos conflitos.</div>\n<div style='text-align: left'>- Implementação da arquitetura offline-first, incluindo download de dados, persistência local e sincronização automática com o servidor após recuperação da conectividade.</div>\n<div style='text-align: left'>- Integração com Firebase Cloud Messaging para envio de notificações relacionadas a novos conflitos e atualizações operacionais.</div>\n<div style='text-align: left'>- Correção contínua de bugs, melhorias de estabilidade e colaboração com o time para evolução técnica da solução.</div>",
+      "desc": "<b>GeoNexus</b> é uma plataforma mobile para operações em campo, e neste projeto foi desenvolvida uma <b>variação da solução voltada ao gerenciamento de conflitos em obras ferroviárias</b>. Essa versão permitia o registro, acompanhamento e tratamento de ocorrências relacionadas às interações entre operações em campo e proprietários de áreas impactadas pelas obras. <b>A solução foi adaptada para apoiar equipes operacionais durante atividades externas, oferecendo recursos como notificações em tempo real, formulários dinâmicos configuráveis e integração com mapas para apoio à tomada de decisão.</b> <b>Atuei como principal responsável pelo desenvolvimento e evolução do aplicativo mobile</b>, contribuindo com implementação de novas funcionalidades, manutenção contínua, correções e estabilidade da plataforma utilizada em campo.",
+      "details": "Minha atuação no projeto esteve concentrada na frente mobile dessa <b>variação do GeoNexus</b>, sendo responsável pela sustentação técnica, evolução funcional e melhoria contínua da aplicação utilizada pelos operadores durante atividades em campo. <b>As entregas realizadas contribuíram para aumentar a confiabilidade operacional da solução, reduzir impactos causados por indisponibilidade de conexão e proporcionar uma experiência mais eficiente para equipes atuando em ambientes remotos.</b>\nPrincipais atuações no projeto:\n<div style='text-align: left'>- Liderança técnica da frente mobile, atuando no desenvolvimento, evolução e versionamento da variação utilizada pelos operadores de campo.</div>\n<div style='text-align: left'>- Implementação e manutenção de formulários para registro de ocorrências, permitindo coleta estruturada de informações diretamente em campo.</div>\n<div style='text-align: left'>- Desenvolvimento da funcionalidade de formulários dinâmicos, possibilitando que administradores configurassem e disponibilizassem novos fluxos sem necessidade de atualização do aplicativo.</div>\n<div style='text-align: left'>- Integração com mapas utilizando ArcGIS, permitindo visualização espacial e suporte operacional durante o acompanhamento das ocorrências.</div>\n<div style='text-align: left'>- Implementação da arquitetura offline-first, incluindo download de dados, persistência local e sincronização automática com o servidor após recuperação da conectividade.</div>\n<div style='text-align: left'>- Integração com Firebase Cloud Messaging para envio de notificações relacionadas a novas ocorrências e atualizações operacionais.</div>\n<div style='text-align: left'>- Correção contínua de bugs, melhorias de estabilidade e colaboração com o time para evolução técnica da solução.</div>",
       "links": [
         {
           "name": "GeoNexus",
@@ -237,6 +252,50 @@
         {
           "name": "Apresentação",
           "url": "https://www.youtube.com/watch?v=THwxEW83pGA"
+        }
+      ]
+    },
+    {
+      "imgs": [
+        "images/geo-araras/thumbnail.png",
+        "images/geo-araras/projeto-02.png"
+      ],
+      "title": "Portal Araras + GeoAraras",
+      "subtitle": "Imagem Geosistemas [2024]",
+      "badges": [
+        "arcgis",
+        "figma"
+      ],
+      "desc": "O <b>GeoAraras</b> é uma solução desenvolvida para a <b>Prefeitura de Araras - SP</b> durante minha atuação na <b>Imagem Geosistemas</b>, reunindo um geoportal de dados abertos e uma aplicação web com foco em mapas. <b>O projeto foi construído com ArcGIS Experience Builder em 2024</b>, com a proposta de facilitar o acesso a informações públicas do município, camadas geográficas e aplicações temáticas em um único ambiente. O portal apresenta dados abertos e conteúdos institucionais, enquanto o app GeoAraras oferece uma experiência centrada no mapa, permitindo consultar camadas municipais e utilizar ferramentas geográficas de apoio à análise espacial.",
+      "details": "Minha atuação no projeto esteve concentrada no <b>design de interface das telas e no desenvolvimento do GeoAraras</b>, trabalhando a organização visual, a experiência de navegação e a construção da aplicação dentro do ecossistema ArcGIS. A solução foi pensada para atender tanto cidadãos quanto pesquisadores, profissionais e gestores públicos, tornando dados territoriais mais acessíveis e úteis para tomada de decisão.\nPrincipais atuações no projeto:\n<div style='text-align: left'>- Desenvolvimento do web app GeoAraras utilizando ArcGIS Experience Builder.</div>\n<div style='text-align: left'>- Criação e ajuste da interface das telas do portal e da aplicação de mapa, mantendo consistência visual com a identidade da Prefeitura de Araras.</div>\n<div style='text-align: left'>- Organização da experiência de navegação para acesso a dados abertos, aplicações e camadas públicas do município.</div>\n<div style='text-align: left'>- Configuração da aplicação com foco em consulta de camadas geográficas, visualização espacial e ferramentas de apoio ao usuário.</div>\n<div style='text-align: left'>- Colaboração com o time da Imagem Geosistemas para alinhar requisitos, usabilidade e publicação da solução.</div>",
+      "links": [
+        {
+          "name": "Portal Araras",
+          "url": "https://geo.araras.sp.gov.br/portal/apps/experiencebuilder/experience/?id=fd431b69259a4e00812b2ffdd2b01aa2&page=In%C3%ADcio"
+        },
+        {
+          "name": "GeoAraras",
+          "url": "https://geo.araras.sp.gov.br/portal/apps/experiencebuilder/experience/?id=9cbc157408a74701bd4af5d9952436b5&page=P%C3%A1gina"
+        }
+      ]
+    },
+
+    {
+      "imgs": [
+        "images/geoportal-stm/thumbnail.png"
+      ],
+      "title": "Geoportal STM",
+      "subtitle": "Geoportal de Dados Abertos - Imagem Geosistemas [2024]",
+      "badges": [
+        "arcgis",
+        "figma"
+      ],
+      "desc": "O <b>Geoportal STM</b> é um portal de dados abertos desenvolvido para a <b>Secretaria dos Transportes Metropolitanos do Estado de São Paulo</b> durante minha atuação na <b>Imagem Geosistemas</b>. A solução foi construída com <b>ArcGIS Hub</b> em 2024, com o objetivo de centralizar, organizar e facilitar o acesso público a dados geográficos relacionados à mobilidade e ao transporte metropolitano. O portal reúne conteúdos, conjuntos de dados e recursos de consulta em uma experiência web voltada à transparência, descoberta de informações e apoio a análises territoriais.",
+      "details": "Minha atuação no projeto esteve concentrada no <b>desenvolvimento do portal no ArcGIS Hub</b>, trabalhando a estruturação das páginas, organização visual dos conteúdos e configuração da experiência de acesso aos dados abertos. O projeto exigiu atenção à clareza da navegação e à apresentação das informações para públicos com diferentes níveis de familiaridade com dados geográficos.\nPrincipais atuações no projeto:\n<div style='text-align: left'>- Desenvolvimento e configuração do geoportal utilizando ArcGIS Hub.</div>\n<div style='text-align: left'>- Estruturação das páginas e seções para facilitar o acesso a conteúdos e dados abertos da secretaria.</div>\n<div style='text-align: left'>- Organização da experiência visual do portal, priorizando clareza, consistência e navegação objetiva.</div>\n<div style='text-align: left'>- Apoio à publicação e disponibilização de dados geográficos em um ambiente acessível ao público.</div>\n<div style='text-align: left'>- Colaboração com o time da Imagem Geosistemas para alinhar requisitos institucionais, usabilidade e entrega da solução.</div>",
+      "links": [
+        {
+          "name": "Geoportal",
+          "url": "https://geoportalstm-cpg-stm.hub.arcgis.com/"
         }
       ]
     },

@@ -170,17 +170,32 @@
   "projects": [
     {
       "imgs": [
+        "images/smartband/thumbnail.png"
+      ],
+      "title": "Smartband - Field collection app",
+      "subtitle": "Tria Software [2026]",
+      "badges": [
+        "react-native",
+        "typescript",
+        "ios"
+      ],
+      "desc": "<b>Smartband</b> is a mobile application developed to support <b>Bayer field collection workflows</b>, connecting external teams to a complete solution composed of an iOS app, back-end, and artificial intelligence resources. The application was designed to organize field identification, evidence video recording, and form completion associated with field records. <b>The overall project included back-end development, integration with an AI system, and the iOS application</b>, while my role was focused on developing the mobile app used in field operations.",
+      "details": "My role in the project focused on <b>developing the iOS application</b>, building authentication, field identification, video collection, and complementary information workflows. The experience needed to be simple and reliable for outdoor work, with special attention to device permissions, camera usage, location access, and continuity throughout the collection flow.\nMain contributions to the project:\n<div style='text-align: left'>- Development of the main mobile screens and workflows for field agents.</div>\n<div style='text-align: left'>- Implementation of authentication, session persistence, and convenience options such as remembering e-mail and keeping the user signed in.</div>\n<div style='text-align: left'>- Construction of the field identification flow through the camera, using QR Code scanning and routing users to field details.</div>\n<div style='text-align: left'>- Implementation of the video recording process associated with each field, including camera and location permission handling.</div>\n<div style='text-align: left'>- Development of forms to complement field records before sending them to the broader solution ecosystem.</div>\n<div style='text-align: left'>- Integration of the app with project services, connecting the mobile experience to the back-end and planned artificial intelligence resources.</div>",
+      "links": []
+    },
+    {
+      "imgs": [
         "images/project_imgs/geonexus.png"
       ],
-      "title": "GeoNexus Mobile",
-      "subtitle": "Field conflicts manager - Tria Software [2026]",
+      "title": "Geonexus - Conflito em campo",
+      "subtitle": "Tria Software [2025]",
       "badges": [
         "arcgis",
         "react-native",
         "android"
       ],
-      "desc": "<b>GeoNexus</b> is a mobile application designed for conflict management in railway construction projects, enabling the registration, monitoring, and resolution of occurrences related to interactions between field operations and impacted landowners. <b>The solution was developed to support operational teams during field activities, providing features such as real-time notifications, configurable dynamic forms, and map integration to assist decision-making.</b> <b>I acted as the main developer responsible for the mobile application</b>, contributing to the implementation of new features, continuous improvements, maintenance, and overall platform stability used in field operations.",
-      "details": "My role in the project was focused on the mobile front, where I was responsible for the technical ownership, feature evolution, and continuous improvement of the application used by field operators. <b>The delivered solutions contributed to increasing operational reliability, reducing the impact of connectivity limitations, and providing a more efficient experience for teams working in remote environments.</b>\nKey contributions to the project:\n<div style='text-align: left'>- Technical ownership of the mobile application, leading development, feature evolution, maintenance, and version management.</div>\n<div style='text-align: left'>- Implementation and maintenance of conflict registration workflows, enabling structured data collection directly in the field.</div>\n<div style='text-align: left'>- Development of dynamic form capabilities, allowing administrators to configure and publish new workflows without requiring application updates.</div>\n<div style='text-align: left'>- Integration with ArcGIS maps to provide spatial visualization and operational support during conflict analysis and resolution.</div>\n<div style='text-align: left'>- Implementation of an offline-first architecture, including data download, local persistence, and automatic synchronization with the server once connectivity was restored.</div>\n<div style='text-align: left'>- Integration with Firebase Cloud Messaging for notifications related to new conflicts and operational updates.</div>\n<div style='text-align: left'>- Continuous bug fixing, stability improvements, and collaboration with the team to evolve the overall solution architecture.</div>",
+      "desc": "<b>GeoNexus</b> is a mobile platform for field operations, and this project involved the development of a <b>variation of the solution focused on conflict management in railway construction projects</b>. This version enabled the registration, monitoring, and handling of occurrences related to interactions between field operations and impacted landowners. <b>The solution was adapted to support operational teams during field activities, providing features such as real-time notifications, configurable dynamic forms, and map integration to assist decision-making.</b> <b>I acted as the main developer responsible for the mobile application</b>, contributing to the implementation of new features, continuous improvements, maintenance, and overall platform stability used in field operations.",
+      "details": "My role in the project was focused on the mobile front of this <b>GeoNexus variation</b>, where I was responsible for technical ownership, feature evolution, and continuous improvement of the application used by field operators. <b>The delivered solutions contributed to increasing operational reliability, reducing the impact of connectivity limitations, and providing a more efficient experience for teams working in remote environments.</b>\nKey contributions to the project:\n<div style='text-align: left'>- Technical ownership of the mobile front, leading development, feature evolution, maintenance, and version management of the variation used by field operators.</div>\n<div style='text-align: left'>- Implementation and maintenance of occurrence registration workflows, enabling structured data collection directly in the field.</div>\n<div style='text-align: left'>- Development of dynamic form capabilities, allowing administrators to configure and publish new workflows without requiring application updates.</div>\n<div style='text-align: left'>- Integration with ArcGIS maps to provide spatial visualization and operational support during occurrence monitoring.</div>\n<div style='text-align: left'>- Implementation of an offline-first architecture, including data download, local persistence, and automatic synchronization with the server once connectivity was restored.</div>\n<div style='text-align: left'>- Integration with Firebase Cloud Messaging for notifications related to new occurrences and operational updates.</div>\n<div style='text-align: left'>- Continuous bug fixing, stability improvements, and collaboration with the team to evolve the overall solution architecture.</div>",
       "links": [
         {
           "name": "GeoNexus (in Brazilian portuguese)",
@@ -235,6 +250,50 @@
         {
           "name": "Presentation (in brazilian portuguese)",
           "url": "https://www.youtube.com/watch?v=THwxEW83pGA"
+        }
+      ]
+    },
+    {
+      "imgs": [
+        "images/geo-araras/thumbnail.png",
+        "images/geo-araras/projeto-02.png"
+      ],
+      "title": "Portal Araras + GeoAraras",
+      "subtitle": "Imagem Geosistemas [2024]",
+      "badges": [
+        "arcgis",
+        "figma"
+      ],
+      "desc": "<b>GeoAraras</b> is a solution developed for the <b>City of Araras - SP, Brazil</b> during my time at <b>Imagem Geosistemas</b>, combining an open data geoportal with a web map application. <b>The project was built with ArcGIS Experience Builder in 2024</b>, with the goal of making municipal information, public geographic layers, and thematic applications easier to access in a single environment. The portal presents open data and institutional content, while the GeoAraras app provides a map-centered experience where users can consult municipal layers and use geographic tools for spatial analysis.",
+      "details": "My role in the project focused on <b>the UI design of the screens and the development of GeoAraras</b>, working on visual organization, navigation experience, and application construction within the ArcGIS ecosystem. The solution was designed to serve citizens, researchers, professionals, and public managers by making territorial data more accessible and useful for decision-making.\nMain contributions to the project:\n<div style='text-align: left'>- Development of the GeoAraras web app using ArcGIS Experience Builder.</div>\n<div style='text-align: left'>- Creation and adjustment of the portal and map application interfaces, keeping visual consistency with the City of Araras identity.</div>\n<div style='text-align: left'>- Organization of the navigation experience for access to open data, applications, and public municipal layers.</div>\n<div style='text-align: left'>- Configuration of the application with a focus on geographic layer consultation, spatial visualization, and user-support tools.</div>\n<div style='text-align: left'>- Collaboration with the Imagem Geosistemas team to align requirements, usability, and solution publishing.</div>",
+      "links": [
+        {
+          "name": "Araras Portal (in Brazilian portuguese)",
+          "url": "https://geo.araras.sp.gov.br/portal/apps/experiencebuilder/experience/?id=fd431b69259a4e00812b2ffdd2b01aa2&page=In%C3%ADcio"
+        },
+        {
+          "name": "GeoAraras (in Brazilian portuguese)",
+          "url": "https://geo.araras.sp.gov.br/portal/apps/experiencebuilder/experience/?id=9cbc157408a74701bd4af5d9952436b5&page=P%C3%A1gina"
+        }
+      ]
+    },
+
+    {
+      "imgs": [
+        "images/geoportal-stm/thumbnail.png"
+      ],
+      "title": "Geoportal STM",
+      "subtitle": "Open Data Geoportal - Imagem Geosistemas [2024]",
+      "badges": [
+        "arcgis",
+        "figma"
+      ],
+      "desc": "<b>Geoportal STM</b> is an open data portal developed for the <b>Secretariat of Metropolitan Transport of the State of São Paulo (Brazil)</b> during my time at <b>Imagem Geosistemas</b>. The solution was built with <b>ArcGIS Hub</b> in 2024, with the goal of centralizing, organizing, and facilitating public access to geographic data related to mobility and metropolitan transportation. The portal brings together content, datasets, and consultation resources in a web experience focused on transparency, information discovery, and support for territorial analysis.",
+      "details": "My role in the project focused on <b>developing the portal in ArcGIS Hub</b>, working on page structure, visual organization of content, and configuration of the open data access experience. The project required attention to clear navigation and information presentation for audiences with different levels of familiarity with geographic data.\nMain contributions to the project:\n<div style='text-align: left'>- Development and configuration of the geoportal using ArcGIS Hub.</div>\n<div style='text-align: left'>- Structuring of pages and sections to make the secretariat's content and open data easier to access.</div>\n<div style='text-align: left'>- Organization of the portal's visual experience, prioritizing clarity, consistency, and direct navigation.</div>\n<div style='text-align: left'>- Support for publishing and making geographic data available in a public-facing environment.</div>\n<div style='text-align: left'>- Collaboration with the Imagem Geosistemas team to align institutional requirements, usability, and delivery.</div>",
+      "links": [
+        {
+          "name": "Geoportal (in Brazilian portuguese)",
+          "url": "https://geoportalstm-cpg-stm.hub.arcgis.com/"
         }
       ]
     },

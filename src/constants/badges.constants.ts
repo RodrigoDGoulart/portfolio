@@ -36,6 +36,7 @@ import dockerIcon from "@/assets/icons/stacks/docker.svg?react";
 import yoloIcon from "@/assets/icons/stacks/yolo.svg?react";
 import supabaseIcon from "@/assets/icons/stacks/supabase.svg?react";
 import groqIcon from "@/assets/icons/stacks/groq.svg?react";
+import appleIcon from "@/assets/icons/stacks/apple.svg?react";
 
 import { BadgeType } from "../@types";
 
@@ -363,6 +364,15 @@ export const OpenAiBadge: BadgeType = {
   label: "OpenAI API",
 };
 
+export const IosBadge: BadgeType = {
+  color: {
+    primary: "#1f1f1fff",
+    secondary: "white",
+  },
+  icon: appleIcon,
+  label: "iOS",
+};
+
 export const OllamaBadge: BadgeType = {
   color: {
     primary: "#1f1f1fff",
@@ -421,6 +431,7 @@ const BADGES = {
   renderer: RendererBadge,
   figma: FigmaBadge,
   "open-ai": OpenAiBadge,
+  ios: IosBadge,
   ollama: OllamaBadge,
   spring: SpringBadge,
   django: DjangoBadge,
