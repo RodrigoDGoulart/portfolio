@@ -32,10 +32,17 @@ export default function Card({ content, ...props }: Props) {
   const [height, setHeight] = useState<number>(0);
   const measureRef = useRef<HTMLDivElement | null>(null);
 
+  const validLinks = useMemo(
+    () => content.links.filter((link) => Boolean(link.url)),
+    [content.links],
+  );
+
   const Links = useMemo(() => {
+    if (!validLinks.length) return null;
+
     return (
       <div className={styles.links}>
-        {content.links.map((link) => (
+        {validLinks.map((link) => (
           <LinkButton
             styleType="link"
             key={link.url}
@@ -48,7 +55,7 @@ export default function Card({ content, ...props }: Props) {
         ))}
       </div>
     );
-  }, [content.links]);
+  }, [validLinks]);
 
   const measureHeight = () => {
     const el = measureRef.current;
@@ -85,6 +92,7 @@ export default function Card({ content, ...props }: Props) {
     content.desc,
     content.details,
     content.badges?.length,
+    validLinks.length,
   ]);
 
   useEffect(() => {
