@@ -172,7 +172,7 @@
       "imgs": [
         "images/smartband/thumbnail.png"
       ],
-      "title": "Smartband - Field collection app",
+      "title": "Smartband - Field gathering app",
       "subtitle": "Tria Software [2026]",
       "badges": [
         "react-native",
@@ -187,7 +187,7 @@
       "imgs": [
         "images/project_imgs/geonexus.png"
       ],
-      "title": "Geonexus - Conflito em campo",
+      "title": "Geonexus - Field conflicts manager",
       "subtitle": "Tria Software [2025]",
       "badges": [
         "arcgis",

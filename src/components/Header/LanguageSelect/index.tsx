@@ -13,14 +13,14 @@ const EnIcon: IconType = ({ className, ...props }) => (
     viewBox="0 0 32 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    style={{ width: 36, height: 18 }}
     {...props}
+    style={{ ...props.style, width: 36, height: 18 }}
   >
     <text
-      x="16"
-      y="12"
+      x="50%"
+      y="50%"
+      dy=".35em"
       textAnchor="middle"
-      dominantBaseline="middle"
       fill="currentColor"
       fontSize="16"
       fontWeight="700"
@@ -36,14 +36,14 @@ const BrIcon: IconType = ({ className, ...props }) => (
     viewBox="0 0 32 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    style={{ width: 36, height: 18 }}
     {...props}
+    style={{ ...props.style, width: 36, height: 18 }}
   >
     <text
-      x="16"
-      y="12"
+      x="50%"
+      y="50%"
+      dy=".35em"
       textAnchor="middle"
-      dominantBaseline="middle"
       fill="currentColor"
       fontSize="16"
       fontWeight="700"
