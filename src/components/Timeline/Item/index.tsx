@@ -43,13 +43,17 @@ const TimelineItem = forwardRef<HTMLDivElement, Props>(
         </div>
         <div className={styles.content}>
           <div className={styles.header}>
-            <button onClick={props.onExpandRequest}>
+            <button
+              className={styles.headerButton}
+              onClick={props.onExpandRequest}
+              type="button"
+            >
               {props.expanded ? <ArrowUpIcon /> : <ArrowDownIcon />}
+              <span className={styles.titles}>
+                <span className={styles.title}>{content.title}</span>
+                <span className={styles.subtitle}>{content.subtitle}</span>
+              </span>
             </button>
-            <div className={styles.titles}>
-              <span className={styles.title}>{content.title}</span>
-              <span className={styles.subtitle}>{content.subtitle}</span>
-            </div>
           </div>
           <div
             className={`${styles.expand} ${props.expanded ? styles.open : ""}`}
