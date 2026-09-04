@@ -75,9 +75,11 @@
       "subtitle": "Tria Software (Outubro/2025 - Julho/2026)",
       "desc": "- Desenvolvimento de aplicativo mobile integrado com tecnologia GIS;\n- Responsável pela arquitetura front-end, implementação de novas funcionalidades, versionamento e entregas de sprint;\n- Colaboração entre times, garantindo consistência de interface, experiência do usuário e alta qualidade nas entregas de sprint;\n- Manutenção, otimização e evolução de módulos do aplicativo;",
       "badges": [
-        "figma",
-        "vue",
-        "python"
+        "react-native",
+        "react",
+        "arcgis",
+        "android",
+        "azure-devops"
       ]
     },
     {
@@ -85,9 +87,12 @@
       "subtitle": "Boostech (Março/2025 - Outubro/2025)",
       "desc": "- Participação ativa no desenvolvimento e evolução de aplicação web em Laravel + Vue.js (Inertia), entregando melhorias contínuas de usabilidade, performance e escalabilidade;\n- Implementação e publicação de aplicativo mobile Android com React Native + Expo, integrando recursos nativos e expandindo o alcance da solução;\n- Entrega de novas funcionalidades de alto impacto para o negócio, alinhadas a boas práticas de UX e arquitetura de software;\n- Definição e incentivo ao uso de boas práticas de desenvolvimento no time, incluindo código limpo, Conventional Commits e melhorias no fluxo de versionamento;",
       "badges": [
-        "figma",
+        "php",
+        "laravel",
+        "javascript",
         "vue",
-        "python"
+        "react-native",
+        "android"
       ]
     },
     {
@@ -95,9 +100,10 @@
       "subtitle": "Imagem (Setembro/2022 - Março/2025)",
       "desc": "- Desenvolvimento de aplicações interativas com foco em GIS (Geographic Information Systems), utilizando React, TypeScript, ArcGIS API e widgets personalizados;\n- Criação de scripts Python para automação de rotinas e tratamento de dados geoespaciais;\n- Atuação em consultorias técnicas sobre sistemas de mapas e desenvolvimento, apoiando clientes na idealização e construção de soluções GIS;",
       "badges": [
-        "figma",
-        "vue",
-        "python"
+        "arcgis",
+        "python",
+        "react",
+        "typescript"
       ]
     }
   ],

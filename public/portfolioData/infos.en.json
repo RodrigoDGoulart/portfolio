@@ -73,9 +73,11 @@
       "subtitle": "Tria Software (October/2025 - July/2026)",
       "desc": "- Development of a mobile application integrated with GIS technologies;\n- Responsible for front-end architecture, feature implementation, versioning and sprint deliveries;\n- Collaboration with cross-functional teams to ensure consistent UX and high-quality deliverables;\n- Maintenance, optimization and evolution of core application modules;",
       "badges": [
-        "figma",
-        "vue",
-        "python"
+        "react-native",
+        "react",
+        "arcgis",
+        "android",
+        "azure-devops"
       ]
     },
     {
@@ -83,9 +85,12 @@
       "subtitle": "Boostech (March/2025 - October/2025)",
       "desc": "- Active participation in the development and evolution of a YMS web application built with Laravel + Vue.js, delivering continuous improvements in usability, performance and scalability;\n- Implementation and deployment of an Android mobile application using React Native + Expo, integrating native features and expanding the solution's reach;\n- Delivery of high-impact features aligned with best practices in UX and software architecture;\n- Definition and promotion of development best practices within the team, including clean code, Conventional Commits and improvements to version control workflows;",
       "badges": [
-        "figma",
+        "php",
+        "laravel",
+        "javascript",
         "vue",
-        "python"
+        "react-native",
+        "android"
       ]
     },
     {
@@ -93,9 +98,10 @@
       "subtitle": "Imagem (September/2022 - March/2025)",
       "desc": "- Development of interactive applications focused on GIS (Geographic Information Systems), using React, TypeScript, ArcGIS API and Experience Builder custom widgets;\n- Creation of Python scripts for workflow automation and geospatial data processing;\n- Participation in technical consulting for mapping and development systems, supporting clients in the design and implementation of GIS solutions;",
       "badges": [
-        "figma",
-        "vue",
-        "python"
+        "arcgis",
+        "python",
+        "react",
+        "typescript"
       ]
     }
   ],
