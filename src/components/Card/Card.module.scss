@@ -4,6 +4,7 @@
   overflow: hidden;
   max-width: 760px;
   scroll-margin-top: 80px;
+  position: relative;
 }
 
 /* anima só a altura, sem mexer na opacidade */
@@ -17,13 +18,32 @@
 .switcher {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 200ms ease, transform 240ms ease;
   will-change: opacity, transform;
 }
 
-.fadeOut {
-  opacity: 0;
-  transform: translateY(-6px);
+.contentIn {
+  animation: content-in 240ms ease both;
+}
+
+@keyframes content-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.measureWrap {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  z-index: -1;
 }
 
 /* Layout compacto / expandido só organizam conteúdo */
@@ -84,6 +104,13 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  max-height: 63px;
+}
+
+.descWithoutLinks {
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  max-height: 84px;
 }
 
 .desc,

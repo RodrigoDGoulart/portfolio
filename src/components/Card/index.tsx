@@ -10,7 +10,14 @@ import Text from "../Text";
 import BadgeContainer from "../BadgeContainer";
 import ImageSlides from "../ImageSlides";
 
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import classNames from "classnames";
 import LinkButton from "../LinkButton";
 
@@ -24,13 +31,11 @@ interface Props {
 }
 
 export default function Card({ content, ...props }: Props) {
-  const [renderExpanded, setRenderExpanded] = useState<boolean>(
-    !!props.expaned,
-  );
-  const [isFading, setIsFading] = useState(false);
-
   const [height, setHeight] = useState<number>(0);
-  const measureRef = useRef<HTMLDivElement | null>(null);
+  const compactMeasureRef = useRef<HTMLDivElement | null>(null);
+  const expandedMeasureRef = useRef<HTMLDivElement | null>(null);
+  const isExpanded = !!props.expaned;
+  const previousExpandedRef = useRef(isExpanded);
 
   const validLinks = useMemo(
     () => content.links.filter((link) => Boolean(link.url)),
@@ -57,36 +62,19 @@ export default function Card({ content, ...props }: Props) {
     );
   }, [validLinks]);
 
-  const measureHeight = () => {
-    const el = measureRef.current;
+  const measureHeight = useCallback(() => {
+    const el = isExpanded
+      ? expandedMeasureRef.current
+      : compactMeasureRef.current;
+
     if (!el) return;
     setHeight(el.scrollHeight);
-  };
-
-  // anima troca (só conteúdo)
-  useEffect(() => {
-    const next = !!props.expaned;
-    if (next === renderExpanded) return;
-
-    setIsFading(true);
-
-    const t = window.setTimeout(() => {
-      setRenderExpanded(next);
-      requestAnimationFrame(() => {
-        measureHeight();
-        setIsFading(false);
-        props.onContract?.();
-      });
-    }, 200);
-
-    return () => window.clearTimeout(t);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props.expaned, renderExpanded]);
+  }, [isExpanded]);
 
   useLayoutEffect(() => {
     measureHeight();
   }, [
-    renderExpanded,
+    measureHeight,
     content.title,
     content.subtitle,
     content.desc,
@@ -96,25 +84,34 @@ export default function Card({ content, ...props }: Props) {
   ]);
 
   useEffect(() => {
-    const el = measureRef.current;
-    if (!el) return;
+    const compactEl = compactMeasureRef.current;
+    const expandedEl = expandedMeasureRef.current;
+    if (!compactEl || !expandedEl) return;
 
     const ro = new ResizeObserver(() => measureHeight());
-    ro.observe(el);
+    ro.observe(compactEl);
+    ro.observe(expandedEl);
     return () => ro.disconnect();
-  }, [renderExpanded]);
+  }, [measureHeight]);
 
-  // chama onExpand no fim da animação
   useEffect(() => {
-    if (!props.expaned) return;
+    if (previousExpandedRef.current === isExpanded) {
+      return;
+    }
+
+    previousExpandedRef.current = isExpanded;
 
     const t = window.setTimeout(() => {
-      props.onExpand?.();
-    }, 450);
+      if (isExpanded) {
+        props.onExpand?.();
+      } else {
+        props.onContract?.();
+      }
+    }, 240);
 
     return () => window.clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props.expaned]);
+  }, [isExpanded]);
 
   function CompactContent() {
     return (
@@ -141,7 +138,12 @@ export default function Card({ content, ...props }: Props) {
             <BadgeContainer badges={content.badges} maxLength={4} />
           </div>
 
-          <Text className={styles.desc}>
+          <Text
+            className={classNames(
+              styles.desc,
+              !validLinks.length && styles.descWithoutLinks,
+            )}
+          >
             <span dangerouslySetInnerHTML={{ __html: content.desc }} />
           </Text>
 
@@ -207,14 +209,20 @@ export default function Card({ content, ...props }: Props) {
 
   return (
     <div className={styles.shell} id={props.id}>
-      {/* altura anima aqui */}
       <div className={styles.heightWrap} style={{ height }}>
-        {/* opacidade/slide só no conteúdo */}
         <div
-          ref={measureRef}
-          className={classNames(styles.switcher, isFading && styles.fadeOut)}
+          key={isExpanded ? "expanded" : "compact"}
+          className={classNames(styles.switcher, styles.contentIn)}
         >
-          {renderExpanded ? <ExpandedContent /> : <CompactContent />}
+          {isExpanded ? <ExpandedContent /> : <CompactContent />}
+        </div>
+      </div>
+      <div className={styles.measureWrap} aria-hidden="true">
+        <div ref={compactMeasureRef}>
+          <CompactContent />
+        </div>
+        <div ref={expandedMeasureRef}>
+          <ExpandedContent />
         </div>
       </div>
     </div>
